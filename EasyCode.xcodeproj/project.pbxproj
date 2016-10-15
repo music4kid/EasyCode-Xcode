@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		670F2ED51DB2284400A1739F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2ED41DB2284400A1739F /* AppDelegate.m */; };
+		670F2ED81DB2284400A1739F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2ED71DB2284400A1739F /* main.m */; };
+		670F2EDA1DB2284400A1739F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670F2ED91DB2284400A1739F /* Assets.xcassets */; };
+		670F2EDD1DB2284400A1739F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670F2EDB1DB2284400A1739F /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		670F2ED01DB2284400A1739F /* EasyCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		670F2ED31DB2284400A1739F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		670F2ED41DB2284400A1739F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		670F2ED71DB2284400A1739F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		670F2ED91DB2284400A1739F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		670F2EDC1DB2284400A1739F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		670F2EDE1DB2284400A1739F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		670F2ECD1DB2284400A1739F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		670F2EC71DB2284400A1739F = {
+			isa = PBXGroup;
+			children = (
+				670F2ED21DB2284400A1739F /* EasyCode */,
+				670F2ED11DB2284400A1739F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		670F2ED11DB2284400A1739F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				670F2ED01DB2284400A1739F /* EasyCode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		670F2ED21DB2284400A1739F /* EasyCode */ = {
+			isa = PBXGroup;
+			children = (
+				670F2ED31DB2284400A1739F /* AppDelegate.h */,
+				670F2ED41DB2284400A1739F /* AppDelegate.m */,
+				670F2ED91DB2284400A1739F /* Assets.xcassets */,
+				670F2EDB1DB2284400A1739F /* MainMenu.xib */,
+				670F2EDE1DB2284400A1739F /* Info.plist */,
+				670F2ED61DB2284400A1739F /* Supporting Files */,
+			);
+			path = EasyCode;
+			sourceTree = "<group>";
+		};
+		670F2ED61DB2284400A1739F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				670F2ED71DB2284400A1739F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		670F2ECF1DB2284400A1739F /* EasyCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670F2EE11DB2284400A1739F /* Build configuration list for PBXNativeTarget "EasyCode" */;
+			buildPhases = (
+				670F2ECC1DB2284400A1739F /* Sources */,
+				670F2ECD1DB2284400A1739F /* Frameworks */,
+				670F2ECE1DB2284400A1739F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyCode;
+			productName = EasyCode;
+			productReference = 670F2ED01DB2284400A1739F /* EasyCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		670F2EC81DB2284400A1739F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = music4kid;
+				TargetAttributes = {
+					670F2ECF1DB2284400A1739F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2WQE6AU5PD;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 670F2ECB1DB2284400A1739F /* Build configuration list for PBXProject "EasyCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 670F2EC71DB2284400A1739F;
+			productRefGroup = 670F2ED11DB2284400A1739F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				670F2ECF1DB2284400A1739F /* EasyCode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		670F2ECE1DB2284400A1739F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670F2EDA1DB2284400A1739F /* Assets.xcassets in Resources */,
+				670F2EDD1DB2284400A1739F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		670F2ECC1DB2284400A1739F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670F2ED81DB2284400A1739F /* main.m in Sources */,
+				670F2ED51DB2284400A1739F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		670F2EDB1DB2284400A1739F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				670F2EDC1DB2284400A1739F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		670F2EDF1DB2284400A1739F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		670F2EE01DB2284400A1739F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		670F2EE21DB2284400A1739F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2WQE6AU5PD;
+				INFOPLIST_FILE = EasyCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		670F2EE31DB2284400A1739F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2WQE6AU5PD;
+				INFOPLIST_FILE = EasyCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		670F2ECB1DB2284400A1739F /* Build configuration list for PBXProject "EasyCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670F2EDF1DB2284400A1739F /* Debug */,
+				670F2EE01DB2284400A1739F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		670F2EE11DB2284400A1739F /* Build configuration list for PBXNativeTarget "EasyCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670F2EE21DB2284400A1739F /* Debug */,
+				670F2EE31DB2284400A1739F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 670F2EC81DB2284400A1739F /* Project object */;
+}
