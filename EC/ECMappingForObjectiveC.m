@@ -48,6 +48,7 @@
              //MISC
              KeyOC_MISC_DEL:KeyOC_MISC_DEL_Value,
              KeyOC_MISC_V:KeyOC_MISC_V_Value,
+             KeyOC_MISC_C:KeyOC_MISC_C_Value,
              KeyOC_MISC_P:KeyOC_MISC_P_Value,
              KeyOC_MISC_W:KeyOC_MISC_W_Value,
              KeyOC_MISC_N:KeyOC_MISC_N_Value,
@@ -56,6 +57,10 @@
              KeyOC_MISC_IMG:KeyOC_MISC_IMG_Value,
              KeyOC_MISC_BUN:KeyOC_MISC_BUN_Value,
              
+             //Template
+             KeyOC_Template_Button:KeyOC_Template_Button_Value,
+             KeyOC_Template_Label:KeyOC_Template_Label_Value,
+             KeyOC_Template_ImageView:KeyOC_Template_ImageView_Value,
              
              }.mutableCopy;
     

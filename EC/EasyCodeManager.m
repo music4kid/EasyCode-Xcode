@@ -27,7 +27,7 @@
     return instance;
 }
 
-- (int)insertWithBuffer:(NSMutableArray*)lines lineIndex:(NSInteger)index {
+- (int)insertWithBuffer:(NSMutableArray*)lines lineIndex:(NSInteger)index column:(NSInteger)column {
     int matchedCount = 0;
     
     if (index > lines.count-1) {
@@ -35,14 +35,14 @@
     }
     
     NSString* originalLine = lines[index];
-    NSString* selectedLine = [originalLine stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
     
     int matchLength = 4;
     while (matchLength >= 1) {
         
-        if (selectedLine.length >= matchLength) {
-            NSString* lastNStr = [selectedLine substringFromIndex:selectedLine.length-matchLength];
+        if (column-matchLength >= 0)
+        {
+            NSRange targetRange = NSMakeRange(column-matchLength, matchLength);
+            NSString* lastNStr = [originalLine substringWithRange:targetRange];
             NSString* matchedVal = [self getMatchedCode:lastNStr];
             
             if (matchedVal.length > 0) {
@@ -57,7 +57,10 @@
                 NSArray* linesToInsert = [self convertToLines:matchedVal];
                 
                 //insert 1st line
-                lines[index] = [originalLine stringByReplacingOccurrencesOfString:lastNStr withString:linesToInsert[0]];
+                lines[index] = [originalLine stringByReplacingOccurrencesOfString:lastNStr
+                                                                       withString:linesToInsert[0]
+                                                                          options:NSBackwardsSearch
+                                                                            range:targetRange];
                 
                 //insert the rest
                 for (int i = 1; i < linesToInsert.count; i ++) {

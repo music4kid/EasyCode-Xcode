@@ -200,6 +200,10 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 #define KeyOC_MISC_V_Value @"\
 - (void)<#method#>"
 
+#define KeyOC_MISC_C @"c"
+#define KeyOC_MISC_C_Value @"\
+[UIColor colorWith<#color#>]"
+
 #define KeyOC_MISC_P @"p"
 #define KeyOC_MISC_P_Value @"\
 @property (nonatomic, strong) <#type#>         <#name#>"
@@ -234,7 +238,33 @@ __weak __typeof(self) wself = self;"
 
 
 
+#pragma mark- Template
+#define KeyOC_Template_Button @"btn"
+#define KeyOC_Template_Button_Value @"\
+UIButton *btn = [UIButton new];\n\
+[btn setBackgroundColor:<#(UIColor * _Nullable)#>];\n\
+[btn setTitle:<#(nullable NSString *)#> forState:UIControlStateNormal];\n\
+[btn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:UIControlEventTouchUpInside];\n\
+[<#self#> addSubview:btn];\n\
+<#self.btn#> = btn;"
 
+#define KeyOC_Template_Label @"lb"
+#define KeyOC_Template_Label_Value @"\
+UILabel *lb = [UILabel new];\n\
+lb.text = <#text#>;\n\
+lb.textColor = <#(UIColor * _Nullable)#>;\n\
+lb.font = [UIFont systemFontOfSize:<#(CGFloat)#>];\n\
+lb.backgroundColor = [UIColor clearColor];\n\
+[<#self#> addSubview:lb];\n\
+<#self.lb#> = lb;"
+
+#define KeyOC_Template_ImageView @"iv"
+#define KeyOC_Template_ImageView_Value @"\
+UIImageView* imgV = [UIImageView new];\n\
+imgV.backgroundColor = [UIColor clearColor];\n\
+imgV.image = [UIImage imageNamed:<#(nonnull NSString *)#>];\n\
+[<#self#> addSubview:imgV];\n\
+<#self.imgV#> = imgV;"
 
 
 

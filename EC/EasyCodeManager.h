@@ -13,6 +13,6 @@
 + (instancetype)sharedInstance;
 
 //return number of characters matched
-- (int)insertWithBuffer:(NSMutableArray*)lines lineIndex:(NSInteger)index;
+- (int)insertWithBuffer:(NSMutableArray*)lines lineIndex:(NSInteger)index column:(NSInteger)column;
 
 @end
