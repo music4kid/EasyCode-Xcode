@@ -220,6 +220,10 @@ __weak __typeof(self) wself = self;"
 #define KeyOC_MISC_F_Value @"\
 [[NSFileManager defaultManager] <#method#>];"
 
+#define KeyOC_MISC_URL @"url"
+#define KeyOC_MISC_URL_Value @"\
+[NSURL URLWithString:<#(nonnull NSString *)#>]"
+
 #define KeyOC_MISC_IMG @"img"
 #define KeyOC_MISC_IMG_Value @"\
 [UIImage imageNamed:<#(nonnull NSString *)#>];"

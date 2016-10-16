@@ -163,6 +163,10 @@ bun对应
 1. 读取整个工程文件的权限
 2. GUI交互
 
-欢迎关注公众号：
+**☕️orz = International Coffee Begging Protocol = ICBP**
+
+<img src="http://mrpeak.cn/images/alipay.png" width="347">
+
+**欢迎关注公众号：**
 
 <img src="http://mrpeak.cn/images/qr.jpg" width="150">
