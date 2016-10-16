@@ -196,12 +196,37 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 #define KeyOC_MISC_DEL_Value @"\
 ([UIApplication sharedApplication].delegate)"
 
+#define KeyOC_MISC_V @"v"
+#define KeyOC_MISC_V_Value @"\
+- (void)<#method#>"
 
+#define KeyOC_MISC_P @"p"
+#define KeyOC_MISC_P_Value @"\
+@property (nonatomic, strong) <#type#>         <#name#>"
 
+#define KeyOC_MISC_W @"w"
+#define KeyOC_MISC_W_Value @"\
+__weak __typeof(self) wself = self;"
 
+#define KeyOC_MISC_N @"n"
+#define KeyOC_MISC_N_Value @"\
+[[NSNotificationCenter defaultCenter] <#method#>];"
 
+#define KeyOC_MISC_U @"u"
+#define KeyOC_MISC_U_Value @"\
+[[NSUserDefaults standardUserDefaults] <#method#>];"
 
+#define KeyOC_MISC_F @"f"
+#define KeyOC_MISC_F_Value @"\
+[[NSFileManager defaultManager] <#method#>];"
 
+#define KeyOC_MISC_IMG @"img"
+#define KeyOC_MISC_IMG_Value @"\
+[UIImage imageNamed:<#(nonnull NSString *)#>];"
+
+#define KeyOC_MISC_BUN @"bun"
+#define KeyOC_MISC_BUN_Value @"\
+[[NSBundle mainBundle] pathForResource:<#(nullable NSString *)#> ofType:<#(nullable NSString *)#>];"
 
 
 

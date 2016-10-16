@@ -39,7 +39,7 @@
     
     
     int matchLength = 4;
-    while (matchLength >= 2) {
+    while (matchLength >= 1) {
         
         if (selectedLine.length >= matchLength) {
             NSString* lastNStr = [selectedLine substringFromIndex:selectedLine.length-matchLength];

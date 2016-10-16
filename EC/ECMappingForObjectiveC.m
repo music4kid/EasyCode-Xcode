@@ -46,7 +46,15 @@
              KeyOC_GCD_DASG:KeyOC_GCD_DASG_Value,
              
              //MISC
-             
+             KeyOC_MISC_DEL:KeyOC_MISC_DEL_Value,
+             KeyOC_MISC_V:KeyOC_MISC_V_Value,
+             KeyOC_MISC_P:KeyOC_MISC_P_Value,
+             KeyOC_MISC_W:KeyOC_MISC_W_Value,
+             KeyOC_MISC_N:KeyOC_MISC_N_Value,
+             KeyOC_MISC_U:KeyOC_MISC_U_Value,
+             KeyOC_MISC_F:KeyOC_MISC_F_Value,
+             KeyOC_MISC_IMG:KeyOC_MISC_IMG_Value,
+             KeyOC_MISC_BUN:KeyOC_MISC_BUN_Value,
              
              
              }.mutableCopy;
