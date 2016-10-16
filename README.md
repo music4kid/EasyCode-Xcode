@@ -165,7 +165,7 @@ bun对应
 
 **☕️orz = International Coffee Begging Protocol = ICBP**
 
-<img src="http://mrpeak.cn/images/alipay.png" width="347">
+<img src="http://mrpeak.cn/images/mypay.png" width="320">
 
 **欢迎关注公众号：**
 
