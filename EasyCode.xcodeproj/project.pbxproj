@@ -11,7 +11,37 @@
 		670F2ED81DB2284400A1739F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2ED71DB2284400A1739F /* main.m */; };
 		670F2EDA1DB2284400A1739F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670F2ED91DB2284400A1739F /* Assets.xcassets */; };
 		670F2EDD1DB2284400A1739F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670F2EDB1DB2284400A1739F /* MainMenu.xib */; };
+		670F2EEB1DB228DD00A1739F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670F2EEA1DB228DD00A1739F /* Cocoa.framework */; };
+		670F2EF11DB228DD00A1739F /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2EF01DB228DD00A1739F /* SourceEditorExtension.m */; };
+		670F2EF41DB228DD00A1739F /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2EF31DB228DD00A1739F /* SourceEditorCommand.m */; };
+		670F2EF81DB228DD00A1739F /* EC.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 670F2EE81DB228DC00A1739F /* EC.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */; };
+		67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		670F2EF61DB228DD00A1739F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 670F2EC81DB2284400A1739F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 670F2EE71DB228DC00A1739F;
+			remoteInfo = EC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		670F2EFC1DB228DD00A1739F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				670F2EF81DB228DD00A1739F /* EC.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		670F2ED01DB2284400A1739F /* EasyCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +51,19 @@
 		670F2ED91DB2284400A1739F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		670F2EDC1DB2284400A1739F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		670F2EDE1DB2284400A1739F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		670F2EE81DB228DC00A1739F /* EC.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EC.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		670F2EEA1DB228DD00A1739F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		670F2EEE1DB228DD00A1739F /* EC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EC.entitlements; sourceTree = "<group>"; };
+		670F2EEF1DB228DD00A1739F /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		670F2EF01DB228DD00A1739F /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		670F2EF21DB228DD00A1739F /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		670F2EF31DB228DD00A1739F /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		670F2EF51DB228DD00A1739F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67302B0B1DB23ACA0030C360 /* EasyCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyCodeManager.h; sourceTree = "<group>"; };
+		67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyCodeManager.m; sourceTree = "<group>"; };
+		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForObjectiveC.h; sourceTree = "<group>"; };
+		67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForObjectiveC.m; sourceTree = "<group>"; };
+		6751C6251DB23D5500004735 /* OCMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMapping.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +74,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		670F2EE51DB228DC00A1739F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670F2EEB1DB228DD00A1739F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				670F2ED21DB2284400A1739F /* EasyCode */,
+				670F2EEC1DB228DD00A1739F /* EC */,
+				670F2EE91DB228DD00A1739F /* Frameworks */,
 				670F2ED11DB2284400A1739F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				670F2ED01DB2284400A1739F /* EasyCode.app */,
+				670F2EE81DB228DC00A1739F /* EC.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +125,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		670F2EE91DB228DD00A1739F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				670F2EEA1DB228DD00A1739F /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		670F2EEC1DB228DD00A1739F /* EC */ = {
+			isa = PBXGroup;
+			children = (
+				670F2EEF1DB228DD00A1739F /* SourceEditorExtension.h */,
+				670F2EF01DB228DD00A1739F /* SourceEditorExtension.m */,
+				670F2EF21DB228DD00A1739F /* SourceEditorCommand.h */,
+				670F2EF31DB228DD00A1739F /* SourceEditorCommand.m */,
+				67302B0B1DB23ACA0030C360 /* EasyCodeManager.h */,
+				67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */,
+				67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */,
+				67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */,
+				6751C6251DB23D5500004735 /* OCMapping.h */,
+				670F2EF51DB228DD00A1739F /* Info.plist */,
+				670F2EED1DB228DD00A1739F /* Supporting Files */,
+			);
+			path = EC;
+			sourceTree = "<group>";
+		};
+		670F2EED1DB228DD00A1739F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				670F2EEE1DB228DD00A1739F /* EC.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,15 +169,34 @@
 				670F2ECC1DB2284400A1739F /* Sources */,
 				670F2ECD1DB2284400A1739F /* Frameworks */,
 				670F2ECE1DB2284400A1739F /* Resources */,
+				670F2EFC1DB228DD00A1739F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				670F2EF71DB228DD00A1739F /* PBXTargetDependency */,
 			);
 			name = EasyCode;
 			productName = EasyCode;
 			productReference = 670F2ED01DB2284400A1739F /* EasyCode.app */;
 			productType = "com.apple.product-type.application";
+		};
+		670F2EE71DB228DC00A1739F /* EC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670F2EF91DB228DD00A1739F /* Build configuration list for PBXNativeTarget "EC" */;
+			buildPhases = (
+				670F2EE41DB228DC00A1739F /* Sources */,
+				670F2EE51DB228DC00A1739F /* Frameworks */,
+				670F2EE61DB228DC00A1739F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EC;
+			productName = EC;
+			productReference = 670F2EE81DB228DC00A1739F /* EC.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +208,11 @@
 				ORGANIZATIONNAME = music4kid;
 				TargetAttributes = {
 					670F2ECF1DB2284400A1739F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2WQE6AU5PD;
+						ProvisioningStyle = Automatic;
+					};
+					670F2EE71DB228DC00A1739F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2WQE6AU5PD;
 						ProvisioningStyle = Automatic;
@@ -121,6 +233,7 @@
 			projectRoot = "";
 			targets = (
 				670F2ECF1DB2284400A1739F /* EasyCode */,
+				670F2EE71DB228DC00A1739F /* EC */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +245,13 @@
 			files = (
 				670F2EDA1DB2284400A1739F /* Assets.xcassets in Resources */,
 				670F2EDD1DB2284400A1739F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		670F2EE61DB228DC00A1739F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +267,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		670F2EE41DB228DC00A1739F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */,
+				670F2EF11DB228DD00A1739F /* SourceEditorExtension.m in Sources */,
+				67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */,
+				670F2EF41DB228DD00A1739F /* SourceEditorCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		670F2EF71DB228DD00A1739F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 670F2EE71DB228DC00A1739F /* EC */;
+			targetProxy = 670F2EF61DB228DD00A1739F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		670F2EDB1DB2284400A1739F /* MainMenu.xib */ = {
@@ -252,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2WQE6AU5PD;
 				INFOPLIST_FILE = EasyCode/Info.plist;
@@ -265,12 +405,45 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2WQE6AU5PD;
 				INFOPLIST_FILE = EasyCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		670F2EFA1DB228DD00A1739F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EC/EC.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2WQE6AU5PD;
+				INFOPLIST_FILE = EC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode.EC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		670F2EFB1DB228DD00A1739F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EC/EC.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2WQE6AU5PD;
+				INFOPLIST_FILE = EC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode.EC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -293,6 +466,16 @@
 				670F2EE31DB2284400A1739F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		670F2EF91DB228DD00A1739F /* Build configuration list for PBXNativeTarget "EC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670F2EFA1DB228DD00A1739F /* Debug */,
+				670F2EFB1DB228DD00A1739F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
