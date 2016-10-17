@@ -156,7 +156,7 @@ bun对应
 
 在缩写字母的后面按快捷键：
 
-<img src="http://mrpeak.cn/images/ec01.gif" width="480">
+<img src="http://mrpeak.cn/images/ec01.gif" width="512">
 
 任何问题或者有常用代码需要添加的，欢迎去github提issue。
 
