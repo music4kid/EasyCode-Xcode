@@ -6,6 +6,8 @@
 
 <img src="http://mrpeak.cn/images/ec01.gif" width="1024">
 
+<img src="http://mrpeak.cn/images/ec03.gif" width="1024">
+
 #### 正题
 
 Extension现有的API只能获取到当前正在编辑的文件内容，没有再多的功能了(⊙﹏⊙)。幸运的是我们可以对当前文件内容做修改，正好之前写[FastStub](http://mrpeak.cn/blog/faststub/)的时候，有过一个idea：**能通过字母缩写的方式快速插入一段代码**。
@@ -141,6 +143,10 @@ bun对应
 ```
 
 还有其他一些类似的缩写，现阶段添加了一些个人觉得比较常用的API或者缩写，如果不符合自己的记忆习惯的话，可以fork项目后自己配置快捷方式。
+
+**还可以根据selector生成方法体**：
+
+<img src="http://mrpeak.cn/images/ec03.gif" width="1024">
 
 这款插件的目标是让大家少敲一些重复代码，初步使用下来感觉还比较愉悦，适合既勤快（记得住API）又爱偷懒（懒得敲完整API）的同学。
 
