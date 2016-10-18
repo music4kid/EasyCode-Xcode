@@ -1,5 +1,5 @@
 //
-//  ECMappingHelper.h
+//  ECGenerateHelper.h
 //  EasyCode
 //
 //  Created by gao feng on 2016/10/18.
@@ -9,11 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <XcodeKit/XcodeKit.h>
 
-@interface ECMapping : NSObject
-- (NSDictionary*)provideMapping;
-@end
-
-@interface ECMappingHelper : NSObject
+@interface ECGenerateHelper : NSObject
 
 + (instancetype)sharedInstance;
 

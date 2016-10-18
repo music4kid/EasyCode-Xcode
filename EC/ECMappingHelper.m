@@ -65,11 +65,18 @@
     return self;
 }
 
-- (int)insertWithBuffer:(NSMutableArray*)lines lineIndex:(NSInteger)index column:(NSInteger)column {
+
+- (BOOL)handleInvocation:(XCSourceEditorCommandInvocation *)invocation {
+    
+    XCSourceTextRange *selection = invocation.buffer.selections.firstObject;
+    NSMutableArray* lines = invocation.buffer.lines;
+    NSInteger index = selection.start.line;
+    NSInteger column = selection.end.column;
+    
     int matchedCount = 0;
     
     if (index > lines.count-1) {
-        return matchedCount;
+        return false;
     }
     
     NSString* originalLine = lines[index];
@@ -118,7 +125,13 @@
         
     }
     
-    return matchedCount;
+    
+    //adjust selection
+    if (matchedCount > 0) {
+        selection.start = XCSourceTextPositionMake(selection.start.line, selection.start.column-matchedCount);
+        selection.end = selection.start;
+    }
+    return true;
 }
 
 

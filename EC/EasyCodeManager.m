@@ -8,6 +8,7 @@
 
 #import "EasyCodeManager.h"
 #import "ECMappingForObjectiveC.h"
+#import "ECGenerateHelper.h"
 
 @interface EasyCodeManager ()
 
@@ -27,15 +28,18 @@
     return instance;
 }
 
-- (int)handleWithBuffer:(NSMutableArray*)lines lineIndex:(NSInteger)index column:(NSInteger)column {
-    
-    //replace abbr with template code
-    int matchedCount = [[ECMappingHelper sharedInstance] insertWithBuffer:lines lineIndex:index column:column];
-    
+- (void)handleInvocation:(XCSourceEditorCommandInvocation *)invocation
+{
     //dynamic code generation based on class parsing like FastStub(https://github.com/music4kid/FastStub-Xcode)
+    if ([[ECGenerateHelper sharedInstance] handleInvocation:invocation]) {
+        return;
+    }
+    
+    if ([[ECMappingHelper sharedInstance] handleInvocation:invocation]) {
+        return;
+    }
     
     
-    return matchedCount;
 }
 
 

@@ -19,6 +19,18 @@
 		67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */; };
 		67AFF68E1DB5B45400697135 /* ECMappingForSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */; };
 		67AFF6931DB5B71200697135 /* ECMappingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6921DB5B71200697135 /* ECMappingHelper.m */; };
+		67AFF6A01DB5C8A100697135 /* ECGenerateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF69F1DB5C8A100697135 /* ECGenerateHelper.m */; };
+		67AFF6E11DB5CBE000697135 /* FSElementPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6D01DB5CBE000697135 /* FSElementPool.m */; };
+		67AFF6E21DB5CBE000697135 /* FSElementCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6D31DB5CBE000697135 /* FSElementCache.m */; };
+		67AFF6E31DB5CBE000697135 /* FSCategoryProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6D61DB5CBE000697135 /* FSCategoryProcessor.m */; };
+		67AFF6E41DB5CBE000697135 /* FSElementProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6D81DB5CBE000697135 /* FSElementProcessor.m */; };
+		67AFF6E51DB5CBE000697135 /* FSExtensionProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6DA1DB5CBE000697135 /* FSExtensionProcessor.m */; };
+		67AFF6E61DB5CBE000697135 /* FSImpProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6DC1DB5CBE000697135 /* FSImpProcessor.m */; };
+		67AFF6E71DB5CBE000697135 /* FSInterfaceProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6DE1DB5CBE000697135 /* FSInterfaceProcessor.m */; };
+		67AFF6E81DB5CBE000697135 /* FSProtocolProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6E01DB5CBE000697135 /* FSProtocolProcessor.m */; };
+		67AFF6EB1DB5CBF500697135 /* ECFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6E91DB5CBF500697135 /* ECFileParser.m */; };
+		67AFF6F01DB5CC2E00697135 /* NSString+PDRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6EF1DB5CC2E00697135 /* NSString+PDRegex.m */; };
+		67AFF6F31DB5CC5B00697135 /* FSElementProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6F21DB5CC5B00697135 /* FSElementProperty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +83,30 @@
 		67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForSwift.m; sourceTree = "<group>"; };
 		67AFF6911DB5B71200697135 /* ECMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingHelper.h; sourceTree = "<group>"; };
 		67AFF6921DB5B71200697135 /* ECMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingHelper.m; sourceTree = "<group>"; };
+		67AFF69E1DB5C8A100697135 /* ECGenerateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGenerateHelper.h; sourceTree = "<group>"; };
+		67AFF69F1DB5C8A100697135 /* ECGenerateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGenerateHelper.m; sourceTree = "<group>"; };
+		67AFF6CF1DB5CBE000697135 /* FSElementPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementPool.h; sourceTree = "<group>"; };
+		67AFF6D01DB5CBE000697135 /* FSElementPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementPool.m; sourceTree = "<group>"; };
+		67AFF6D21DB5CBE000697135 /* FSElementCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementCache.h; sourceTree = "<group>"; };
+		67AFF6D31DB5CBE000697135 /* FSElementCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementCache.m; sourceTree = "<group>"; };
+		67AFF6D51DB5CBE000697135 /* FSCategoryProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCategoryProcessor.h; sourceTree = "<group>"; };
+		67AFF6D61DB5CBE000697135 /* FSCategoryProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCategoryProcessor.m; sourceTree = "<group>"; };
+		67AFF6D71DB5CBE000697135 /* FSElementProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementProcessor.h; sourceTree = "<group>"; };
+		67AFF6D81DB5CBE000697135 /* FSElementProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementProcessor.m; sourceTree = "<group>"; };
+		67AFF6D91DB5CBE000697135 /* FSExtensionProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSExtensionProcessor.h; sourceTree = "<group>"; };
+		67AFF6DA1DB5CBE000697135 /* FSExtensionProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSExtensionProcessor.m; sourceTree = "<group>"; };
+		67AFF6DB1DB5CBE000697135 /* FSImpProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImpProcessor.h; sourceTree = "<group>"; };
+		67AFF6DC1DB5CBE000697135 /* FSImpProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImpProcessor.m; sourceTree = "<group>"; };
+		67AFF6DD1DB5CBE000697135 /* FSInterfaceProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSInterfaceProcessor.h; sourceTree = "<group>"; };
+		67AFF6DE1DB5CBE000697135 /* FSInterfaceProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSInterfaceProcessor.m; sourceTree = "<group>"; };
+		67AFF6DF1DB5CBE000697135 /* FSProtocolProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSProtocolProcessor.h; sourceTree = "<group>"; };
+		67AFF6E01DB5CBE000697135 /* FSProtocolProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSProtocolProcessor.m; sourceTree = "<group>"; };
+		67AFF6E91DB5CBF500697135 /* ECFileParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECFileParser.m; sourceTree = "<group>"; };
+		67AFF6EA1DB5CBF500697135 /* ECFileParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECFileParser.h; sourceTree = "<group>"; };
+		67AFF6EE1DB5CC2E00697135 /* NSString+PDRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PDRegex.h"; sourceTree = "<group>"; };
+		67AFF6EF1DB5CC2E00697135 /* NSString+PDRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PDRegex.m"; sourceTree = "<group>"; };
+		67AFF6F11DB5CC5B00697135 /* FSElementProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementProperty.h; sourceTree = "<group>"; };
+		67AFF6F21DB5CC5B00697135 /* FSElementProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementProperty.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +189,7 @@
 				67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */,
 				67AFF6941DB5BACE00697135 /* Features */,
 				670F2EF51DB228DD00A1739F /* Info.plist */,
+				67AFF6EC1DB5CC2E00697135 /* 3rdParty */,
 				670F2EED1DB228DD00A1739F /* Supporting Files */,
 			);
 			path = EC;
@@ -189,10 +226,73 @@
 		67AFF6941DB5BACE00697135 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				67AFF6CE1DB5CBE000697135 /* ECFileParser */,
+				67AFF69E1DB5C8A100697135 /* ECGenerateHelper.h */,
+				67AFF69F1DB5C8A100697135 /* ECGenerateHelper.m */,
 				67AFF6911DB5B71200697135 /* ECMappingHelper.h */,
 				67AFF6921DB5B71200697135 /* ECMappingHelper.m */,
 			);
 			name = Features;
+			sourceTree = "<group>";
+		};
+		67AFF6CE1DB5CBE000697135 /* ECFileParser */ = {
+			isa = PBXGroup;
+			children = (
+				67AFF6EA1DB5CBF500697135 /* ECFileParser.h */,
+				67AFF6E91DB5CBF500697135 /* ECFileParser.m */,
+				67AFF6CF1DB5CBE000697135 /* FSElementPool.h */,
+				67AFF6D01DB5CBE000697135 /* FSElementPool.m */,
+				67AFF6D11DB5CBE000697135 /* Models */,
+				67AFF6D41DB5CBE000697135 /* Processors */,
+			);
+			path = ECFileParser;
+			sourceTree = "<group>";
+		};
+		67AFF6D11DB5CBE000697135 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67AFF6F11DB5CC5B00697135 /* FSElementProperty.h */,
+				67AFF6F21DB5CC5B00697135 /* FSElementProperty.m */,
+				67AFF6D21DB5CBE000697135 /* FSElementCache.h */,
+				67AFF6D31DB5CBE000697135 /* FSElementCache.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67AFF6D41DB5CBE000697135 /* Processors */ = {
+			isa = PBXGroup;
+			children = (
+				67AFF6D51DB5CBE000697135 /* FSCategoryProcessor.h */,
+				67AFF6D61DB5CBE000697135 /* FSCategoryProcessor.m */,
+				67AFF6D71DB5CBE000697135 /* FSElementProcessor.h */,
+				67AFF6D81DB5CBE000697135 /* FSElementProcessor.m */,
+				67AFF6D91DB5CBE000697135 /* FSExtensionProcessor.h */,
+				67AFF6DA1DB5CBE000697135 /* FSExtensionProcessor.m */,
+				67AFF6DB1DB5CBE000697135 /* FSImpProcessor.h */,
+				67AFF6DC1DB5CBE000697135 /* FSImpProcessor.m */,
+				67AFF6DD1DB5CBE000697135 /* FSInterfaceProcessor.h */,
+				67AFF6DE1DB5CBE000697135 /* FSInterfaceProcessor.m */,
+				67AFF6DF1DB5CBE000697135 /* FSProtocolProcessor.h */,
+				67AFF6E01DB5CBE000697135 /* FSProtocolProcessor.m */,
+			);
+			path = Processors;
+			sourceTree = "<group>";
+		};
+		67AFF6EC1DB5CC2E00697135 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				67AFF6ED1DB5CC2E00697135 /* NSString+PDRegex */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		67AFF6ED1DB5CC2E00697135 /* NSString+PDRegex */ = {
+			isa = PBXGroup;
+			children = (
+				67AFF6EE1DB5CC2E00697135 /* NSString+PDRegex.h */,
+				67AFF6EF1DB5CC2E00697135 /* NSString+PDRegex.m */,
+			);
+			path = "NSString+PDRegex";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,12 +407,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67AFF6A01DB5C8A100697135 /* ECGenerateHelper.m in Sources */,
 				67AFF6931DB5B71200697135 /* ECMappingHelper.m in Sources */,
 				67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */,
+				67AFF6F01DB5CC2E00697135 /* NSString+PDRegex.m in Sources */,
+				67AFF6E51DB5CBE000697135 /* FSExtensionProcessor.m in Sources */,
 				67AFF68E1DB5B45400697135 /* ECMappingForSwift.m in Sources */,
 				670F2EF11DB228DD00A1739F /* SourceEditorExtension.m in Sources */,
+				67AFF6E31DB5CBE000697135 /* FSCategoryProcessor.m in Sources */,
+				67AFF6F31DB5CC5B00697135 /* FSElementProperty.m in Sources */,
 				67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */,
 				670F2EF41DB228DD00A1739F /* SourceEditorCommand.m in Sources */,
+				67AFF6E41DB5CBE000697135 /* FSElementProcessor.m in Sources */,
+				67AFF6E11DB5CBE000697135 /* FSElementPool.m in Sources */,
+				67AFF6E71DB5CBE000697135 /* FSInterfaceProcessor.m in Sources */,
+				67AFF6E81DB5CBE000697135 /* FSProtocolProcessor.m in Sources */,
+				67AFF6E21DB5CBE000697135 /* FSElementCache.m in Sources */,
+				67AFF6EB1DB5CBF500697135 /* ECFileParser.m in Sources */,
+				67AFF6E61DB5CBE000697135 /* FSImpProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

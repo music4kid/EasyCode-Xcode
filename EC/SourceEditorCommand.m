@@ -13,17 +13,7 @@
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler
 {
-    XCSourceTextRange *selection = invocation.buffer.selections.firstObject;
-    NSInteger index = selection.start.line;
-    
-    int matchedCharacterCount =  [[EasyCodeManager sharedInstance] handleWithBuffer:invocation.buffer.lines
-                                                                          lineIndex:index
-                                                                            column:selection.end.column];
-    //adjust selection
-    if (matchedCharacterCount > 0) {
-        selection.start = XCSourceTextPositionMake(selection.start.line, selection.start.column-matchedCharacterCount);
-        selection.end = selection.start;
-    }
+    [[EasyCodeManager sharedInstance] handleInvocation:invocation];
     
     completionHandler(nil);
 }

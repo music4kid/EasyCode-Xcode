@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <XcodeKit/XcodeKit.h>
 
 @interface EasyCodeManager : NSObject
 
 + (instancetype)sharedInstance;
 
 //return number of characters matched
-- (int)handleWithBuffer:(NSMutableArray*)lines lineIndex:(NSInteger)index column:(NSInteger)column;
+- (void)handleInvocation:(XCSourceEditorCommandInvocation *)invocation;
 
 @end
