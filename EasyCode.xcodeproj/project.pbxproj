@@ -17,6 +17,8 @@
 		670F2EF81DB228DD00A1739F /* EC.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 670F2EE81DB228DC00A1739F /* EC.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */; };
 		67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */; };
+		67AFF68E1DB5B45400697135 /* ECMappingForSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */; };
+		67AFF6931DB5B71200697135 /* ECMappingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6921DB5B71200697135 /* ECMappingHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,11 @@
 		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForObjectiveC.h; sourceTree = "<group>"; };
 		67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForObjectiveC.m; sourceTree = "<group>"; };
 		6751C6251DB23D5500004735 /* OCMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMapping.h; sourceTree = "<group>"; };
+		67AFF68B1DB5B44000697135 /* SwiftMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMapping.h; sourceTree = "<group>"; };
+		67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForSwift.h; sourceTree = "<group>"; };
+		67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForSwift.m; sourceTree = "<group>"; };
+		67AFF6911DB5B71200697135 /* ECMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingHelper.h; sourceTree = "<group>"; };
+		67AFF6921DB5B71200697135 /* ECMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,15 +143,15 @@
 		670F2EEC1DB228DD00A1739F /* EC */ = {
 			isa = PBXGroup;
 			children = (
+				67AFF6901DB5B46000697135 /* Swift */,
+				67AFF68F1DB5B45A00697135 /* ObjectiveC */,
 				670F2EEF1DB228DD00A1739F /* SourceEditorExtension.h */,
 				670F2EF01DB228DD00A1739F /* SourceEditorExtension.m */,
 				670F2EF21DB228DD00A1739F /* SourceEditorCommand.h */,
 				670F2EF31DB228DD00A1739F /* SourceEditorCommand.m */,
 				67302B0B1DB23ACA0030C360 /* EasyCodeManager.h */,
 				67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */,
-				67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */,
-				67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */,
-				6751C6251DB23D5500004735 /* OCMapping.h */,
+				67AFF6941DB5BACE00697135 /* Features */,
 				670F2EF51DB228DD00A1739F /* Info.plist */,
 				670F2EED1DB228DD00A1739F /* Supporting Files */,
 			);
@@ -157,6 +164,35 @@
 				670F2EEE1DB228DD00A1739F /* EC.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67AFF68F1DB5B45A00697135 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */,
+				67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */,
+				6751C6251DB23D5500004735 /* OCMapping.h */,
+			);
+			name = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		67AFF6901DB5B46000697135 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */,
+				67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */,
+				67AFF68B1DB5B44000697135 /* SwiftMapping.h */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		67AFF6941DB5BACE00697135 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				67AFF6911DB5B71200697135 /* ECMappingHelper.h */,
+				67AFF6921DB5B71200697135 /* ECMappingHelper.m */,
+			);
+			name = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67AFF6931DB5B71200697135 /* ECMappingHelper.m in Sources */,
 				67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */,
+				67AFF68E1DB5B45400697135 /* ECMappingForSwift.m in Sources */,
 				670F2EF11DB228DD00A1739F /* SourceEditorExtension.m in Sources */,
 				67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */,
 				670F2EF41DB228DD00A1739F /* SourceEditorCommand.m in Sources */,

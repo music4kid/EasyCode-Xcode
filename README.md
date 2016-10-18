@@ -2,7 +2,7 @@
 
 新制了一款Xcode“合法”插件，之所以说合法，是因为Xcode 8开始禁用了之前所有的第三方插件，新开发的插件要通过安全性检验，必须使用官方的Xcode Editor Extension来做。这款EasyCode插件就是基于Extension来实现，现阶段Extension虽然只提供了「少得可怜」的API，但至少Xcode团队迈出了羞涩的第一步。
 
-**插件效果：**
+#### **插件效果**
 
 <img src="http://mrpeak.cn/images/ec01.gif" width="1024">
 

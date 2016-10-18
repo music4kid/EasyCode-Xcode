@@ -16,7 +16,7 @@
     XCSourceTextRange *selection = invocation.buffer.selections.firstObject;
     NSInteger index = selection.start.line;
     
-    int matchedCharacterCount =  [[EasyCodeManager sharedInstance] insertWithBuffer:invocation.buffer.lines
+    int matchedCharacterCount =  [[EasyCodeManager sharedInstance] handleWithBuffer:invocation.buffer.lines
                                                                           lineIndex:index
                                                                             column:selection.end.column];
     //adjust selection

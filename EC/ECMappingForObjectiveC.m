@@ -11,7 +11,7 @@
 
 @implementation ECMappingForObjectiveC
 
-+ (NSDictionary*)ocMapping {
+- (NSDictionary*)provideMapping {
     NSDictionary* mapping = @{
              //UIViewController
              KeyOC_UIViewController_VDL:KeyOC_UIViewController_VDL_Value,
@@ -63,19 +63,6 @@
              KeyOC_Template_ImageView:KeyOC_Template_ImageView_Value,
              
              }.mutableCopy;
-    
-    //check duplicated keys
-    NSArray* keys = mapping.allKeys;
-    NSMutableDictionary* dic = @{}.mutableCopy;
-    for (NSString* key in keys) {
-        if ([dic objectForKey:keys]) {
-            NSLog(@"detect duplicated keys!");
-        }
-        else
-        {
-            dic[key] = key;
-        }
-    }
     
     return mapping;
 }
