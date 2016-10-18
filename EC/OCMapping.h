@@ -224,6 +224,10 @@ __weak __typeof(self) wself = self;"
 #define KeyOC_MISC_F_Value @"\
 [[NSFileManager defaultManager] <#method#>];"
 
+#define KeyOC_MISC_M @"m"
+#define KeyOC_MISC_M_Value @"\
+#pragma mark - <#text#>"
+
 #define KeyOC_MISC_URL @"url"
 #define KeyOC_MISC_URL_Value @"\
 [NSURL URLWithString:<#(nonnull NSString *)#>]"

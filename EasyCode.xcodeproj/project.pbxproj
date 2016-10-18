@@ -14,7 +14,14 @@
 		670F2EEB1DB228DD00A1739F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670F2EEA1DB228DD00A1739F /* Cocoa.framework */; };
 		670F2EF11DB228DD00A1739F /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2EF01DB228DD00A1739F /* SourceEditorExtension.m */; };
 		670F2EF41DB228DD00A1739F /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2EF31DB228DD00A1739F /* SourceEditorCommand.m */; };
-		670F2EF81DB228DD00A1739F /* EC.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 670F2EE81DB228DC00A1739F /* EC.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		670F2EF81DB228DD00A1739F /* EasyCode.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 670F2EE81DB228DC00A1739F /* EasyCode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6710398E1DB61E140040D421 /* Artboard-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 6710398D1DB61E140040D421 /* Artboard-1024.png */; };
+		671039901DB61E330040D421 /* Artboard-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 6710398F1DB61E330040D421 /* Artboard-512.png */; };
+		671039951DB65D010040D421 /* Artboard-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039911DB65D010040D421 /* Artboard-32.png */; };
+		671039961DB65D010040D421 /* Artboard-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039921DB65D010040D421 /* Artboard-64.png */; };
+		671039971DB65D010040D421 /* Artboard-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039931DB65D010040D421 /* Artboard-128.png */; };
+		671039981DB65D010040D421 /* Artboard-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039941DB65D010040D421 /* Artboard-256.png */; };
+		6710399A1DB65D380040D421 /* Artboard-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039991DB65D380040D421 /* Artboard-16.png */; };
 		67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */; };
 		67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */; };
 		67AFF68E1DB5B45400697135 /* ECMappingForSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */; };
@@ -50,7 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				670F2EF81DB228DD00A1739F /* EC.appex in Embed App Extensions */,
+				670F2EF81DB228DD00A1739F /* EasyCode.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +72,7 @@
 		670F2ED91DB2284400A1739F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		670F2EDC1DB2284400A1739F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		670F2EDE1DB2284400A1739F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		670F2EE81DB228DC00A1739F /* EC.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EC.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		670F2EE81DB228DC00A1739F /* EasyCode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EasyCode.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		670F2EEA1DB228DD00A1739F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		670F2EEE1DB228DD00A1739F /* EC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EC.entitlements; sourceTree = "<group>"; };
 		670F2EEF1DB228DD00A1739F /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
@@ -73,6 +80,13 @@
 		670F2EF21DB228DD00A1739F /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
 		670F2EF31DB228DD00A1739F /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
 		670F2EF51DB228DD00A1739F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6710398D1DB61E140040D421 /* Artboard-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-1024.png"; sourceTree = "<group>"; };
+		6710398F1DB61E330040D421 /* Artboard-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-512.png"; sourceTree = "<group>"; };
+		671039911DB65D010040D421 /* Artboard-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-32.png"; sourceTree = "<group>"; };
+		671039921DB65D010040D421 /* Artboard-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-64.png"; sourceTree = "<group>"; };
+		671039931DB65D010040D421 /* Artboard-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-128.png"; sourceTree = "<group>"; };
+		671039941DB65D010040D421 /* Artboard-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-256.png"; sourceTree = "<group>"; };
+		671039991DB65D380040D421 /* Artboard-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-16.png"; sourceTree = "<group>"; };
 		67302B0B1DB23ACA0030C360 /* EasyCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyCodeManager.h; sourceTree = "<group>"; };
 		67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyCodeManager.m; sourceTree = "<group>"; };
 		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForObjectiveC.h; sourceTree = "<group>"; };
@@ -142,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				670F2ED01DB2284400A1739F /* EasyCode.app */,
-				670F2EE81DB228DC00A1739F /* EC.appex */,
+				670F2EE81DB228DC00A1739F /* EasyCode.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,9 +212,24 @@
 		670F2EED1DB228DD00A1739F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6710398C1DB61E140040D421 /* Resources */,
 				670F2EEE1DB228DD00A1739F /* EC.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6710398C1DB61E140040D421 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				671039991DB65D380040D421 /* Artboard-16.png */,
+				671039911DB65D010040D421 /* Artboard-32.png */,
+				671039921DB65D010040D421 /* Artboard-64.png */,
+				671039931DB65D010040D421 /* Artboard-128.png */,
+				671039941DB65D010040D421 /* Artboard-256.png */,
+				6710398F1DB61E330040D421 /* Artboard-512.png */,
+				6710398D1DB61E140040D421 /* Artboard-1024.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		67AFF68F1DB5B45A00697135 /* ObjectiveC */ = {
@@ -331,7 +360,7 @@
 			);
 			name = EC;
 			productName = EC;
-			productReference = 670F2EE81DB228DC00A1739F /* EC.appex */;
+			productReference = 670F2EE81DB228DC00A1739F /* EasyCode.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -388,6 +417,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6710399A1DB65D380040D421 /* Artboard-16.png in Resources */,
+				671039961DB65D010040D421 /* Artboard-64.png in Resources */,
+				6710398E1DB61E140040D421 /* Artboard-1024.png in Resources */,
+				671039901DB61E330040D421 /* Artboard-512.png in Resources */,
+				671039951DB65D010040D421 /* Artboard-32.png in Resources */,
+				671039981DB65D010040D421 /* Artboard-256.png in Resources */,
+				671039971DB65D010040D421 /* Artboard-128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +582,8 @@
 				DEVELOPMENT_TEAM = 2WQE6AU5PD;
 				INFOPLIST_FILE = EasyCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -560,7 +597,8 @@
 				DEVELOPMENT_TEAM = 2WQE6AU5PD;
 				INFOPLIST_FILE = EasyCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -575,8 +613,8 @@
 				INFOPLIST_FILE = EC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode.EC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec.ec;
+				PRODUCT_NAME = EasyCode;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -591,8 +629,8 @@
 				INFOPLIST_FILE = EC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.EasyCode.EC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec.ec;
+				PRODUCT_NAME = EasyCode;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
