@@ -14,7 +14,7 @@
 		670F2EEB1DB228DD00A1739F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670F2EEA1DB228DD00A1739F /* Cocoa.framework */; };
 		670F2EF11DB228DD00A1739F /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2EF01DB228DD00A1739F /* SourceEditorExtension.m */; };
 		670F2EF41DB228DD00A1739F /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F2EF31DB228DD00A1739F /* SourceEditorCommand.m */; };
-		670F2EF81DB228DD00A1739F /* EasyCode.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 670F2EE81DB228DC00A1739F /* EasyCode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		670F2EF81DB228DD00A1739F /* EC.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 670F2EE81DB228DC00A1739F /* EC.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6710398E1DB61E140040D421 /* Artboard-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 6710398D1DB61E140040D421 /* Artboard-1024.png */; };
 		671039901DB61E330040D421 /* Artboard-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 6710398F1DB61E330040D421 /* Artboard-512.png */; };
 		671039951DB65D010040D421 /* Artboard-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039911DB65D010040D421 /* Artboard-32.png */; };
@@ -57,7 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				670F2EF81DB228DD00A1739F /* EasyCode.appex in Embed App Extensions */,
+				670F2EF81DB228DD00A1739F /* EC.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,7 +72,7 @@
 		670F2ED91DB2284400A1739F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		670F2EDC1DB2284400A1739F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		670F2EDE1DB2284400A1739F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		670F2EE81DB228DC00A1739F /* EasyCode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EasyCode.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		670F2EE81DB228DC00A1739F /* EC.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EC.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		670F2EEA1DB228DD00A1739F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		670F2EEE1DB228DD00A1739F /* EC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EC.entitlements; sourceTree = "<group>"; };
 		670F2EEF1DB228DD00A1739F /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForObjectiveC.h; sourceTree = "<group>"; };
 		67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForObjectiveC.m; sourceTree = "<group>"; };
 		6751C6251DB23D5500004735 /* OCMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMapping.h; sourceTree = "<group>"; };
+		676E320D1DB70B2000C9DC9B /* EasyCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyCode.entitlements; sourceTree = "<group>"; };
 		67AFF68B1DB5B44000697135 /* SwiftMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMapping.h; sourceTree = "<group>"; };
 		67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForSwift.h; sourceTree = "<group>"; };
 		67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForSwift.m; sourceTree = "<group>"; };
@@ -156,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				670F2ED01DB2284400A1739F /* EasyCode.app */,
-				670F2EE81DB228DC00A1739F /* EasyCode.appex */,
+				670F2EE81DB228DC00A1739F /* EC.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +165,7 @@
 		670F2ED21DB2284400A1739F /* EasyCode */ = {
 			isa = PBXGroup;
 			children = (
+				676E320D1DB70B2000C9DC9B /* EasyCode.entitlements */,
 				670F2ED31DB2284400A1739F /* AppDelegate.h */,
 				670F2ED41DB2284400A1739F /* AppDelegate.m */,
 				670F2ED91DB2284400A1739F /* Assets.xcassets */,
@@ -360,7 +362,7 @@
 			);
 			name = EC;
 			productName = EC;
-			productReference = 670F2EE81DB228DC00A1739F /* EasyCode.appex */;
+			productReference = 670F2EE81DB228DC00A1739F /* EC.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -376,6 +378,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2WQE6AU5PD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					670F2EE71DB228DC00A1739F = {
 						CreatedOnToolsVersion = 8.0;
@@ -577,12 +584,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyCode/EasyCode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2WQE6AU5PD;
 				INFOPLIST_FILE = EasyCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -592,12 +600,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyCode/EasyCode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2WQE6AU5PD;
 				INFOPLIST_FILE = EasyCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -614,7 +623,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec.ec;
-				PRODUCT_NAME = EasyCode;
+				PRODUCT_NAME = EC;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -630,7 +639,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.ec.ec;
-				PRODUCT_NAME = EasyCode;
+				PRODUCT_NAME = EC;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

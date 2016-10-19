@@ -156,6 +156,14 @@ bun对应
 
 下载代码后通过Xcode8运行即可，运行前要用自己的开发者证书对Target签名。
 
+如果看不到菜单栏，请在terminal执行如下命令：
+
+```
+sudo /usr/libexec/xpccachectl
+```
+
+再重启下Mac，工程里有两个Target，EasyCode和EC，确保两个都运行一次，貌似Xcode现在有bug，偶尔会看不到菜单项。
+
 后面如果Xcode如果能开放更多的API，再考虑放到AppStore上。
 
 #### 使用方式：

@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "670F2EE71DB228DC00A1739F"
-               BuildableName = "EasyCode.appex"
+               BuildableName = "EC.appex"
                BlueprintName = "EC"
                ReferencedContainer = "container:EasyCode.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "670F2EE71DB228DC00A1739F"
-            BuildableName = "EasyCode.appex"
+            BuildableName = "EC.appex"
             BlueprintName = "EC"
             ReferencedContainer = "container:EasyCode.xcodeproj">
          </BuildableReference>
