@@ -22,8 +22,30 @@
 		671039971DB65D010040D421 /* Artboard-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039931DB65D010040D421 /* Artboard-128.png */; };
 		671039981DB65D010040D421 /* Artboard-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039941DB65D010040D421 /* Artboard-256.png */; };
 		6710399A1DB65D380040D421 /* Artboard-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 671039991DB65D380040D421 /* Artboard-16.png */; };
+		6729B1BA1DB8CFA300885A9A /* ESharedUserDefault.h in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE4D1DB87340000408E7 /* ESharedUserDefault.h */; };
+		6729B1BB1DB8CFA300885A9A /* ESharedUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE4E1DB87340000408E7 /* ESharedUserDefault.m */; };
 		67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */; };
 		67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */; };
+		6741CE4F1DB87340000408E7 /* ESharedUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE4E1DB87340000408E7 /* ESharedUserDefault.m */; };
+		6741CE521DB87BC2000408E7 /* ECMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE511DB87BC2000408E7 /* ECMapping.m */; };
+		6741CE561DB87CE8000408E7 /* ECMapping.h in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE501DB87BC2000408E7 /* ECMapping.h */; };
+		6741CE571DB87CE8000408E7 /* ECMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE511DB87BC2000408E7 /* ECMapping.m */; };
+		6741CE581DB87CE8000408E7 /* ECMappingForSwift.h in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */; };
+		6741CE591DB87CE8000408E7 /* ECMappingForSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */; };
+		6741CE5A1DB87CE8000408E7 /* SwiftMapping.h in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF68B1DB5B44000697135 /* SwiftMapping.h */; };
+		6741CE5B1DB87CE8000408E7 /* ECMappingForObjectiveC.h in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */; };
+		6741CE5C1DB87CE8000408E7 /* ECMappingForObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */; };
+		6741CE5D1DB87CE8000408E7 /* OCMapping.h in Sources */ = {isa = PBXBuildFile; fileRef = 6751C6251DB23D5500004735 /* OCMapping.h */; };
+		6741CE681DB884DD000408E7 /* EditorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE661DB884DD000408E7 /* EditorWindowController.m */; };
+		6741CE691DB884DD000408E7 /* EditorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6741CE671DB884DD000408E7 /* EditorWindowController.xib */; };
+		6741CE6C1DB89894000408E7 /* EShortcutEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE6B1DB89894000408E7 /* EShortcutEntry.m */; };
+		6741CE711DB8A04A000408E7 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 6741CE6E1DB8A04A000408E7 /* edit.png */; };
+		6741CE721DB8A04A000408E7 /* remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 6741CE6F1DB8A04A000408E7 /* remove.png */; };
+		6741CE731DB8A04A000408E7 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 6741CE701DB8A04A000408E7 /* add.png */; };
+		6741CE761DB8A713000408E7 /* EVerticalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE751DB8A713000408E7 /* EVerticalScrollView.m */; };
+		6741CE791DB8B4DF000408E7 /* EEditorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE781DB8B4DF000408E7 /* EEditorTableView.m */; };
+		6741CE7E1DB8BA19000408E7 /* DetailWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741CE7C1DB8BA19000408E7 /* DetailWindowController.m */; };
+		6741CE7F1DB8BA19000408E7 /* DetailWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6741CE7D1DB8BA19000408E7 /* DetailWindowController.xib */; };
 		67AFF68E1DB5B45400697135 /* ECMappingForSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */; };
 		67AFF6931DB5B71200697135 /* ECMappingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6921DB5B71200697135 /* ECMappingHelper.m */; };
 		67AFF6A01DB5C8A100697135 /* ECGenerateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF69F1DB5C8A100697135 /* ECGenerateHelper.m */; };
@@ -89,13 +111,32 @@
 		671039991DB65D380040D421 /* Artboard-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-16.png"; sourceTree = "<group>"; };
 		67302B0B1DB23ACA0030C360 /* EasyCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyCodeManager.h; sourceTree = "<group>"; };
 		67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyCodeManager.m; sourceTree = "<group>"; };
-		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForObjectiveC.h; sourceTree = "<group>"; };
-		67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForObjectiveC.m; sourceTree = "<group>"; };
-		6751C6251DB23D5500004735 /* OCMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMapping.h; sourceTree = "<group>"; };
+		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECMappingForObjectiveC.h; path = ../../EC/ECMappingForObjectiveC.h; sourceTree = "<group>"; };
+		67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECMappingForObjectiveC.m; path = ../../EC/ECMappingForObjectiveC.m; sourceTree = "<group>"; };
+		6741CE4D1DB87340000408E7 /* ESharedUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESharedUserDefault.h; sourceTree = "<group>"; };
+		6741CE4E1DB87340000408E7 /* ESharedUserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESharedUserDefault.m; sourceTree = "<group>"; };
+		6741CE501DB87BC2000408E7 /* ECMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECMapping.h; path = ../../EC/ECMapping.h; sourceTree = "<group>"; };
+		6741CE511DB87BC2000408E7 /* ECMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECMapping.m; path = ../../EC/ECMapping.m; sourceTree = "<group>"; };
+		6741CE651DB884DD000408E7 /* EditorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorWindowController.h; sourceTree = "<group>"; };
+		6741CE661DB884DD000408E7 /* EditorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorWindowController.m; sourceTree = "<group>"; };
+		6741CE671DB884DD000408E7 /* EditorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorWindowController.xib; sourceTree = "<group>"; };
+		6741CE6A1DB89894000408E7 /* EShortcutEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EShortcutEntry.h; sourceTree = "<group>"; };
+		6741CE6B1DB89894000408E7 /* EShortcutEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EShortcutEntry.m; sourceTree = "<group>"; };
+		6741CE6E1DB8A04A000408E7 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		6741CE6F1DB8A04A000408E7 /* remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remove.png; sourceTree = "<group>"; };
+		6741CE701DB8A04A000408E7 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		6741CE741DB8A713000408E7 /* EVerticalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVerticalScrollView.h; sourceTree = "<group>"; };
+		6741CE751DB8A713000408E7 /* EVerticalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVerticalScrollView.m; sourceTree = "<group>"; };
+		6741CE771DB8B4DF000408E7 /* EEditorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEditorTableView.h; sourceTree = "<group>"; };
+		6741CE781DB8B4DF000408E7 /* EEditorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEditorTableView.m; sourceTree = "<group>"; };
+		6741CE7B1DB8BA19000408E7 /* DetailWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWindowController.h; sourceTree = "<group>"; };
+		6741CE7C1DB8BA19000408E7 /* DetailWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWindowController.m; sourceTree = "<group>"; };
+		6741CE7D1DB8BA19000408E7 /* DetailWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailWindowController.xib; sourceTree = "<group>"; };
+		6751C6251DB23D5500004735 /* OCMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMapping.h; path = ../../EC/OCMapping.h; sourceTree = "<group>"; };
 		676E320D1DB70B2000C9DC9B /* EasyCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyCode.entitlements; sourceTree = "<group>"; };
-		67AFF68B1DB5B44000697135 /* SwiftMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMapping.h; sourceTree = "<group>"; };
-		67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForSwift.h; sourceTree = "<group>"; };
-		67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForSwift.m; sourceTree = "<group>"; };
+		67AFF68B1DB5B44000697135 /* SwiftMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftMapping.h; path = ../../EC/SwiftMapping.h; sourceTree = "<group>"; };
+		67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECMappingForSwift.h; path = ../../EC/ECMappingForSwift.h; sourceTree = "<group>"; };
+		67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECMappingForSwift.m; path = ../../EC/ECMappingForSwift.m; sourceTree = "<group>"; };
 		67AFF6911DB5B71200697135 /* ECMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingHelper.h; sourceTree = "<group>"; };
 		67AFF6921DB5B71200697135 /* ECMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingHelper.m; sourceTree = "<group>"; };
 		67AFF69E1DB5C8A100697135 /* ECGenerateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGenerateHelper.h; sourceTree = "<group>"; };
@@ -165,9 +206,12 @@
 		670F2ED21DB2284400A1739F /* EasyCode */ = {
 			isa = PBXGroup;
 			children = (
+				6741CE5E1DB87FEC000408E7 /* MappingEditor */,
+				6741CE4C1DB8732D000408E7 /* SharedLogic */,
 				676E320D1DB70B2000C9DC9B /* EasyCode.entitlements */,
 				670F2ED31DB2284400A1739F /* AppDelegate.h */,
 				670F2ED41DB2284400A1739F /* AppDelegate.m */,
+				6741CE6D1DB89DFE000408E7 /* Resource */,
 				670F2ED91DB2284400A1739F /* Assets.xcassets */,
 				670F2EDB1DB2284400A1739F /* MainMenu.xib */,
 				670F2EDE1DB2284400A1739F /* Info.plist */,
@@ -195,8 +239,6 @@
 		670F2EEC1DB228DD00A1739F /* EC */ = {
 			isa = PBXGroup;
 			children = (
-				67AFF6901DB5B46000697135 /* Swift */,
-				67AFF68F1DB5B45A00697135 /* ObjectiveC */,
 				670F2EEF1DB228DD00A1739F /* SourceEditorExtension.h */,
 				670F2EF01DB228DD00A1739F /* SourceEditorExtension.m */,
 				670F2EF21DB228DD00A1739F /* SourceEditorCommand.h */,
@@ -234,24 +276,76 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		67AFF68F1DB5B45A00697135 /* ObjectiveC */ = {
+		6741CE4C1DB8732D000408E7 /* SharedLogic */ = {
 			isa = PBXGroup;
 			children = (
+				6741CE4D1DB87340000408E7 /* ESharedUserDefault.h */,
+				6741CE4E1DB87340000408E7 /* ESharedUserDefault.m */,
+				6741CE501DB87BC2000408E7 /* ECMapping.h */,
+				6741CE511DB87BC2000408E7 /* ECMapping.m */,
+				67AFF6901DB5B46000697135 /* Swift */,
+				67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */,
+				67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */,
+				67AFF68B1DB5B44000697135 /* SwiftMapping.h */,
+				67AFF68F1DB5B45A00697135 /* ObjectiveC */,
 				67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */,
 				67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */,
 				6751C6251DB23D5500004735 /* OCMapping.h */,
 			);
+			path = SharedLogic;
+			sourceTree = "<group>";
+		};
+		6741CE5E1DB87FEC000408E7 /* MappingEditor */ = {
+			isa = PBXGroup;
+			children = (
+				6741CE7A1DB8B987000408E7 /* DetailEditorController */,
+				6741CE651DB884DD000408E7 /* EditorWindowController.h */,
+				6741CE661DB884DD000408E7 /* EditorWindowController.m */,
+				6741CE671DB884DD000408E7 /* EditorWindowController.xib */,
+				6741CE6A1DB89894000408E7 /* EShortcutEntry.h */,
+				6741CE6B1DB89894000408E7 /* EShortcutEntry.m */,
+				6741CE741DB8A713000408E7 /* EVerticalScrollView.h */,
+				6741CE751DB8A713000408E7 /* EVerticalScrollView.m */,
+				6741CE771DB8B4DF000408E7 /* EEditorTableView.h */,
+				6741CE781DB8B4DF000408E7 /* EEditorTableView.m */,
+			);
+			path = MappingEditor;
+			sourceTree = "<group>";
+		};
+		6741CE6D1DB89DFE000408E7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6741CE6E1DB8A04A000408E7 /* edit.png */,
+				6741CE6F1DB8A04A000408E7 /* remove.png */,
+				6741CE701DB8A04A000408E7 /* add.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6741CE7A1DB8B987000408E7 /* DetailEditorController */ = {
+			isa = PBXGroup;
+			children = (
+				6741CE7B1DB8BA19000408E7 /* DetailWindowController.h */,
+				6741CE7C1DB8BA19000408E7 /* DetailWindowController.m */,
+				6741CE7D1DB8BA19000408E7 /* DetailWindowController.xib */,
+			);
+			path = DetailEditorController;
+			sourceTree = "<group>";
+		};
+		67AFF68F1DB5B45A00697135 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+			);
 			name = ObjectiveC;
+			path = ../../EC;
 			sourceTree = "<group>";
 		};
 		67AFF6901DB5B46000697135 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */,
-				67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */,
-				67AFF68B1DB5B44000697135 /* SwiftMapping.h */,
 			);
 			name = Swift;
+			path = ../../EC;
 			sourceTree = "<group>";
 		};
 		67AFF6941DB5BACE00697135 /* Features */ = {
@@ -379,6 +473,9 @@
 						DevelopmentTeam = 2WQE6AU5PD;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -388,6 +485,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2WQE6AU5PD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -416,7 +518,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				670F2EDA1DB2284400A1739F /* Assets.xcassets in Resources */,
+				6741CE711DB8A04A000408E7 /* edit.png in Resources */,
+				6741CE7F1DB8BA19000408E7 /* DetailWindowController.xib in Resources */,
 				670F2EDD1DB2284400A1739F /* MainMenu.xib in Resources */,
+				6741CE731DB8A04A000408E7 /* add.png in Resources */,
+				6741CE691DB884DD000408E7 /* EditorWindowController.xib in Resources */,
+				6741CE721DB8A04A000408E7 /* remove.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +548,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6741CE561DB87CE8000408E7 /* ECMapping.h in Sources */,
+				6741CE571DB87CE8000408E7 /* ECMapping.m in Sources */,
+				6741CE7E1DB8BA19000408E7 /* DetailWindowController.m in Sources */,
+				6741CE681DB884DD000408E7 /* EditorWindowController.m in Sources */,
+				6741CE761DB8A713000408E7 /* EVerticalScrollView.m in Sources */,
+				6741CE581DB87CE8000408E7 /* ECMappingForSwift.h in Sources */,
+				6741CE591DB87CE8000408E7 /* ECMappingForSwift.m in Sources */,
+				6741CE5A1DB87CE8000408E7 /* SwiftMapping.h in Sources */,
+				6741CE6C1DB89894000408E7 /* EShortcutEntry.m in Sources */,
+				6741CE5B1DB87CE8000408E7 /* ECMappingForObjectiveC.h in Sources */,
+				6741CE791DB8B4DF000408E7 /* EEditorTableView.m in Sources */,
+				6741CE5C1DB87CE8000408E7 /* ECMappingForObjectiveC.m in Sources */,
+				6741CE5D1DB87CE8000408E7 /* OCMapping.h in Sources */,
 				670F2ED81DB2284400A1739F /* main.m in Sources */,
+				6741CE4F1DB87340000408E7 /* ESharedUserDefault.m in Sources */,
 				670F2ED51DB2284400A1739F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +571,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6729B1BA1DB8CFA300885A9A /* ESharedUserDefault.h in Sources */,
+				6729B1BB1DB8CFA300885A9A /* ESharedUserDefault.m in Sources */,
 				67AFF6A01DB5C8A100697135 /* ECGenerateHelper.m in Sources */,
 				67AFF6931DB5B71200697135 /* ECMappingHelper.m in Sources */,
 				67302B101DB23C010030C360 /* ECMappingForObjectiveC.m in Sources */,
@@ -460,6 +583,7 @@
 				67AFF6E31DB5CBE000697135 /* FSCategoryProcessor.m in Sources */,
 				67AFF6F31DB5CC5B00697135 /* FSElementProperty.m in Sources */,
 				67302B0D1DB23ACA0030C360 /* EasyCodeManager.m in Sources */,
+				6741CE521DB87BC2000408E7 /* ECMapping.m in Sources */,
 				670F2EF41DB228DD00A1739F /* SourceEditorCommand.m in Sources */,
 				67AFF6E41DB5CBE000697135 /* FSElementProcessor.m in Sources */,
 				67AFF6E11DB5CBE000697135 /* FSElementPool.m in Sources */,

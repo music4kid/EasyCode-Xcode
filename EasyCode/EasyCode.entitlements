@@ -4,5 +4,9 @@
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>5RQCS68BQ4.group.com.music4kid.easycode</string>
+	</array>
 </dict>
 </plist>

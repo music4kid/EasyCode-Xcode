@@ -10,6 +10,8 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+- (IBAction)showEditorWindowForOC:(id)sender;
+- (IBAction)showEditorWindowForSwift:(id)sender;
 
 @end
 

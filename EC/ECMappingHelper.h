@@ -9,10 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <XcodeKit/XcodeKit.h>
 
-@interface ECMapping : NSObject
-- (NSDictionary*)provideMapping;
-@end
-
 @interface ECMappingHelper : NSObject
 
 + (instancetype)sharedInstance;

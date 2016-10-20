@@ -9,6 +9,7 @@
 #import "EasyCodeManager.h"
 #import "ECMappingForObjectiveC.h"
 #import "ECGenerateHelper.h"
+#import "ECMappingHelper.h"
 
 @interface EasyCodeManager ()
 

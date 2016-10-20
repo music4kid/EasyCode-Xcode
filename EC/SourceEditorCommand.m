@@ -8,12 +8,18 @@
 
 #import "SourceEditorCommand.h"
 #import "EasyCodeManager.h"
+#import <AppKit/NSWorkspace.h>
 
 @implementation SourceEditorCommand
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler
 {
-    [[EasyCodeManager sharedInstance] handleInvocation:invocation];
+    if ([invocation.commandIdentifier isEqualToString:@"easycode.insertcode"]) {
+        [[EasyCodeManager sharedInstance] handleInvocation:invocation];
+    }
+    else if ([invocation.commandIdentifier isEqualToString:@"easycode.editmapping"]) {
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL fileURLWithPath:@"/Applications/EasyCode.app"]];
+    }
     
     completionHandler(nil);
 }

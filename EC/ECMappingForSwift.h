@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ECMappingHelper.h"
+#import "ECMapping.h"
 
 @interface ECMappingForSwift : ECMapping
 

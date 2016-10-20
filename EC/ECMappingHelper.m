@@ -9,16 +9,11 @@
 #import "ECMappingHelper.h"
 #import "ECMappingForObjectiveC.h"
 #import "ECMappingForSwift.h"
-
-@implementation ECMapping
-- (NSDictionary*)provideMapping {
-    return nil;
-}
-@end
+#import "ESharedUserDefault.h"
 
 @interface ECMappingHelper ()
-@property (nonatomic, strong) NSMutableArray*                 mappings;
-
+@property (nonatomic, strong) NSMutableDictionary*                 mappingOC;
+@property (nonatomic, strong) NSMutableDictionary*                 mappingSwift;
 @end
 
 @implementation ECMappingHelper
@@ -39,34 +34,31 @@
 {
     self = [super init];
     if (self) {
-        self.mappings = @[].mutableCopy;
-        
-        [_mappings addObject:[ECMappingForObjectiveC new]];
-        [_mappings addObject:[ECMappingForSwift new]];
-        
-        //check for duplicated keys
-        for (ECMapping* mapping in _mappings) {
-            
-            NSArray* keys = [mapping provideMapping].allKeys;
-            NSMutableDictionary* dic = @{}.mutableCopy;
-            for (NSString* key in keys) {
-                if ([dic objectForKey:keys]) {
-                    NSLog(@"detect duplicated keys!");
-                }
-                else
-                {
-                    dic[key] = key;
-                }
-            }
-            
-        }
-        
+
     }
     return self;
 }
 
+- (void)checkForDuplicatedKeys:(NSDictionary*)mapping
+{
+    //check for duplicated keys
+    NSArray* keys = mapping.allKeys;
+    NSMutableDictionary* dic = @{}.mutableCopy;
+    for (NSString* key in keys) {
+        if ([dic objectForKey:keys]) {
+            NSLog(@"detect duplicated keys!");
+        }
+        else
+        {
+            dic[key] = key;
+        }
+    }
+}
 
 - (BOOL)handleInvocation:(XCSourceEditorCommandInvocation *)invocation {
+    
+    //read from NSUserDefault each time
+    [self clearMapping];
     
     XCSourceTextRange *selection = invocation.buffer.selections.firstObject;
     NSMutableArray* lines = invocation.buffer.lines;
@@ -88,7 +80,7 @@
         {
             NSRange targetRange = NSMakeRange(column-matchLength, matchLength);
             NSString* lastNStr = [originalLine substringWithRange:targetRange];
-            NSString* matchedVal = [self getMatchedCode:lastNStr];
+            NSString* matchedVal = [self getMatchedCode:lastNStr completeContent:invocation.buffer.completeBuffer];
             
             if (matchedVal.length > 0) {
                 
@@ -135,14 +127,25 @@
 }
 
 
-- (NSString*)getMatchedCode:(NSString*)abbr
+- (NSString*)getMatchedCode:(NSString*)abbr completeContent:(NSString*)content
 {
     //need to detect swift or oc
-    for (ECMapping* mapping in _mappings) {
-        NSDictionary* mappingDic = [mapping provideMapping];
-        if ([mappingDic objectForKey:abbr] != nil) {
-            return [mappingDic objectForKey:abbr];
-        }
+    NSDictionary* mappingDic = nil;
+    BOOL isObjectiveC = true;
+    if ([content rangeOfString:@"\nclass "].location != NSNotFound) {
+        isObjectiveC = false;
+    }
+    
+    if (isObjectiveC) {
+        mappingDic = self.mappingOC;
+    }
+    else
+    {
+        mappingDic = self.mappingSwift;
+    }
+    
+    if ([mappingDic objectForKey:abbr] != nil) {
+        return [mappingDic objectForKey:abbr];
     }
     
     return nil;
@@ -162,6 +165,28 @@
     return lines;
 }
 
+- (NSMutableDictionary*)mappingOC
+{
+    if (_mappingOC == nil) {
+        _mappingOC = [_UD readMappingForOC].mutableCopy;
+    }
+    return _mappingOC;
+}
 
+- (NSMutableDictionary*)mappingSwift
+{
+    if (_mappingSwift == nil) {
+        _mappingSwift = [_UD readMappingForSwift].mutableCopy;
+    }
+    return _mappingSwift;
+}
+
+- (void)clearMapping
+{
+    self.mappingOC = nil;
+    self.mappingSwift = nil;
+    
+    [_UD clearMapping];
+}
 
 @end

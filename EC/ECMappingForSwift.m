@@ -7,6 +7,7 @@
 //
 
 #import "ECMappingForSwift.h"
+#import "SwiftMapping.h"
 
 @implementation ECMappingForSwift
 
