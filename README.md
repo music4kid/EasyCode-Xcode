@@ -4,6 +4,10 @@
 
 #### **插件效果**
 
+新增图像编辑界面：
+
+<img src="http://mrpeak.cn/images/ec05.png" width="818">
+
 <img src="http://mrpeak.cn/images/ec01.gif" width="1024">
 
 <img src="http://mrpeak.cn/images/ec03.gif" width="1024">
