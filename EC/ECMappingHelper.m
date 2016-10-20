@@ -80,7 +80,12 @@
         {
             NSRange targetRange = NSMakeRange(column-matchLength, matchLength);
             NSString* lastNStr = [originalLine substringWithRange:targetRange];
-            NSString* matchedVal = [self getMatchedCode:lastNStr completeContent:invocation.buffer.completeBuffer];
+            
+            BOOL isOC = true;
+            if ([invocation.buffer.contentUTI isEqualToString:@"public.swift-source"]) {
+                isOC = false;
+            }
+            NSString* matchedVal = [self getMatchedCode:lastNStr isOC:isOC];
             
             if (matchedVal.length > 0) {
                 
@@ -127,16 +132,12 @@
 }
 
 
-- (NSString*)getMatchedCode:(NSString*)abbr completeContent:(NSString*)content
+- (NSString*)getMatchedCode:(NSString*)abbr isOC:(BOOL)isOC
 {
     //need to detect swift or oc
     NSDictionary* mappingDic = nil;
-    BOOL isObjectiveC = true;
-    if ([content rangeOfString:@"\nclass "].location != NSNotFound) {
-        isObjectiveC = false;
-    }
     
-    if (isObjectiveC) {
+    if (isOC) {
         mappingDic = self.mappingOC;
     }
     else
