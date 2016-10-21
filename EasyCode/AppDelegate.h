@@ -12,6 +12,7 @@
 
 - (IBAction)showEditorWindowForOC:(id)sender;
 - (IBAction)showEditorWindowForSwift:(id)sender;
+- (IBAction)showHowToUse:(id)sender;
 
 @end
 

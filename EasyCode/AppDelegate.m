@@ -46,4 +46,10 @@
     [_editorSwift showWindow:self];
 }
 
+- (IBAction)showHowToUse:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"https://github.com/music4kid/EasyCode-Xcode"]];
+}
+
+
+
 @end

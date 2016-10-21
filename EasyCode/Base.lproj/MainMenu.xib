@@ -719,6 +719,17 @@
                             <action selector="showEditorWindowForSwift:" target="Voe-Tx-rLC" id="Tn3-a4-x37"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITv-Ff-lbi">
+                        <rect key="frame" x="10" y="103" width="300" height="19"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundRect" title="How to use?" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PDU-eu-ISX">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="cellTitle"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHowToUse:" target="Voe-Tx-rLC" id="7SH-Yc-LhX"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
