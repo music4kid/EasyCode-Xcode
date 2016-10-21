@@ -10,7 +10,7 @@
 #import "ECMappingForObjectiveC.h"
 #import "ECMappingForSwift.h"
 
-#define KeySharedContainerGroup @"5RQCS68BQ4.group.com.music4kid.easycode"
+#define KeySharedContainerGroup @"2WQE6AU5PD.group.com.music4kid.easycode"
 
 #define KeyCodeShortcutForObjectiveC @"KeyCodeShortcutForObjectiveC"
 #define KeyCodeShortcutForSwift @"KeyCodeShortcutForSwift"
