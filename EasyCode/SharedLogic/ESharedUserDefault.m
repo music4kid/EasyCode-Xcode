@@ -18,9 +18,6 @@
 #define KeyCurrentUDVersion @"KeyCurrentUDVersion"
 #define ValueCurrentUDVersion @"1"
 
-#define KeyPrefixObjectiveC @"oc."
-#define KeyPrefixSwift @"swift."
-
 @interface ESharedUserDefault ()
 @property (nonatomic, strong) NSUserDefaults*                   sharedUD;
 

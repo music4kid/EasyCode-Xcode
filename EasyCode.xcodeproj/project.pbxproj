@@ -111,8 +111,8 @@
 		671039991DB65D380040D421 /* Artboard-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard-16.png"; sourceTree = "<group>"; };
 		67302B0B1DB23ACA0030C360 /* EasyCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyCodeManager.h; sourceTree = "<group>"; };
 		67302B0C1DB23ACA0030C360 /* EasyCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyCodeManager.m; sourceTree = "<group>"; };
-		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECMappingForObjectiveC.h; path = ../../EC/ECMappingForObjectiveC.h; sourceTree = "<group>"; };
-		67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECMappingForObjectiveC.m; path = ../../EC/ECMappingForObjectiveC.m; sourceTree = "<group>"; };
+		67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForObjectiveC.h; sourceTree = "<group>"; };
+		67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForObjectiveC.m; sourceTree = "<group>"; };
 		6741CE4D1DB87340000408E7 /* ESharedUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESharedUserDefault.h; sourceTree = "<group>"; };
 		6741CE4E1DB87340000408E7 /* ESharedUserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESharedUserDefault.m; sourceTree = "<group>"; };
 		6741CE501DB87BC2000408E7 /* ECMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECMapping.h; path = ../../EC/ECMapping.h; sourceTree = "<group>"; };
@@ -132,11 +132,11 @@
 		6741CE7B1DB8BA19000408E7 /* DetailWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWindowController.h; sourceTree = "<group>"; };
 		6741CE7C1DB8BA19000408E7 /* DetailWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWindowController.m; sourceTree = "<group>"; };
 		6741CE7D1DB8BA19000408E7 /* DetailWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailWindowController.xib; sourceTree = "<group>"; };
-		6751C6251DB23D5500004735 /* OCMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMapping.h; path = ../../EC/OCMapping.h; sourceTree = "<group>"; };
+		6751C6251DB23D5500004735 /* OCMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMapping.h; sourceTree = "<group>"; };
 		676E320D1DB70B2000C9DC9B /* EasyCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyCode.entitlements; sourceTree = "<group>"; };
-		67AFF68B1DB5B44000697135 /* SwiftMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftMapping.h; path = ../../EC/SwiftMapping.h; sourceTree = "<group>"; };
-		67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECMappingForSwift.h; path = ../../EC/ECMappingForSwift.h; sourceTree = "<group>"; };
-		67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECMappingForSwift.m; path = ../../EC/ECMappingForSwift.m; sourceTree = "<group>"; };
+		67AFF68B1DB5B44000697135 /* SwiftMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMapping.h; sourceTree = "<group>"; };
+		67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingForSwift.h; sourceTree = "<group>"; };
+		67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingForSwift.m; sourceTree = "<group>"; };
 		67AFF6911DB5B71200697135 /* ECMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMappingHelper.h; sourceTree = "<group>"; };
 		67AFF6921DB5B71200697135 /* ECMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMappingHelper.m; sourceTree = "<group>"; };
 		67AFF69E1DB5C8A100697135 /* ECGenerateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGenerateHelper.h; sourceTree = "<group>"; };
@@ -284,13 +284,7 @@
 				6741CE501DB87BC2000408E7 /* ECMapping.h */,
 				6741CE511DB87BC2000408E7 /* ECMapping.m */,
 				67AFF6901DB5B46000697135 /* Swift */,
-				67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */,
-				67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */,
-				67AFF68B1DB5B44000697135 /* SwiftMapping.h */,
 				67AFF68F1DB5B45A00697135 /* ObjectiveC */,
-				67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */,
-				67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */,
-				6751C6251DB23D5500004735 /* OCMapping.h */,
 			);
 			path = SharedLogic;
 			sourceTree = "<group>";
@@ -335,6 +329,9 @@
 		67AFF68F1DB5B45A00697135 /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				67302B0E1DB23C010030C360 /* ECMappingForObjectiveC.h */,
+				67302B0F1DB23C010030C360 /* ECMappingForObjectiveC.m */,
+				6751C6251DB23D5500004735 /* OCMapping.h */,
 			);
 			name = ObjectiveC;
 			path = ../../EC;
@@ -343,6 +340,9 @@
 		67AFF6901DB5B46000697135 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				67AFF68C1DB5B45400697135 /* ECMappingForSwift.h */,
+				67AFF68D1DB5B45400697135 /* ECMappingForSwift.m */,
+				67AFF68B1DB5B44000697135 /* SwiftMapping.h */,
 			);
 			name = Swift;
 			path = ../../EC;

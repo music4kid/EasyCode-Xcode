@@ -73,7 +73,7 @@
     
     NSString* originalLine = lines[index];
     
-    int matchLength = 4;
+    int matchLength = 8;//max match length for shortcut
     while (matchLength >= 1) {
         
         if (column-matchLength >= 0)

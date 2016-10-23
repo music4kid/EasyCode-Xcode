@@ -1,3 +1,7 @@
+### Available on App Store:
+
+https://itunes.apple.com/us/app/easycode/id1166493362?ls=1&mt=12
+
 ### What is it?
 
 It's a plugin or extension for Xcode 8, It can be used as a replacement of "Code Snippet Library", It's faster, and highly customizable.
