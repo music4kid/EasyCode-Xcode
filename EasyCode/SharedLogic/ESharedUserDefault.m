@@ -73,8 +73,13 @@
 {
     if (_ocMapping == nil) {
         _ocMapping = [_sharedUD dictionaryForKey:KeyCodeShortcutForObjectiveC].mutableCopy;
-//        _ocMapping = nil;
-        if (_ocMapping == nil) {
+        
+        BOOL isMappingEmpty = false;
+        if (_ocMapping == nil || (_ocMapping.allKeys.count == 1 && [_ocMapping[@"key"] isEqualToString:@"code"])) {
+            isMappingEmpty = true;
+        }
+        
+        if (isMappingEmpty == true) {
             _ocMapping = self.ocMappingDefault.mutableCopy;
             [self saveMappingForOC:self.ocMappingDefault];
         }
@@ -104,8 +109,13 @@
 {
     if (_swiftMapping == nil) {
         _swiftMapping = [_sharedUD dictionaryForKey:KeyCodeShortcutForSwift].mutableCopy;
-//        _swiftMapping = nil;
-        if (_swiftMapping == nil) {
+        
+        BOOL isMappingEmpty = false;
+        if (_ocMapping == nil || (_ocMapping.allKeys.count == 1 && [_ocMapping[@"key"] isEqualToString:@"code"])) {
+            isMappingEmpty = true;
+        }
+
+        if (isMappingEmpty) {
             _swiftMapping = self.swiftMappingDefault.mutableCopy;
             [self saveMappingForOC:self.swiftMappingDefault];
         }
