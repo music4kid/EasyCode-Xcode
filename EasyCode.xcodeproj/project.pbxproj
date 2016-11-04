@@ -60,6 +60,15 @@
 		67AFF6EB1DB5CBF500697135 /* ECFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6E91DB5CBF500697135 /* ECFileParser.m */; };
 		67AFF6F01DB5CC2E00697135 /* NSString+PDRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6EF1DB5CC2E00697135 /* NSString+PDRegex.m */; };
 		67AFF6F31DB5CC5B00697135 /* FSElementProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFF6F21DB5CC5B00697135 /* FSElementProperty.m */; };
+		67F73F9F1DCC8A70000780C3 /* mainbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73F9D1DCC8A70000780C3 /* mainbg.png */; };
+		67F73FA21DCC8ADF000780C3 /* mainbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73FA11DCC8ADF000780C3 /* mainbg@2x.png */; };
+		67F73FA51DCC8BF7000780C3 /* btnbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73FA31DCC8BF7000780C3 /* btnbg.png */; };
+		67F73FA61DCC8BF7000780C3 /* btnbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73FA41DCC8BF7000780C3 /* btnbg@2x.png */; };
+		67F73FA91DCC8E31000780C3 /* btnbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73FA71DCC8E31000780C3 /* btnbg2.png */; };
+		67F73FAA1DCC8E31000780C3 /* btnbg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73FA81DCC8E31000780C3 /* btnbg2@2x.png */; };
+		67F73FAD1DCC9278000780C3 /* btnguide.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73FAB1DCC9278000780C3 /* btnguide.png */; };
+		67F73FAE1DCC9278000780C3 /* btnguide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F73FAC1DCC9278000780C3 /* btnguide@2x.png */; };
+		67F73FB11DCC9625000780C3 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F73FB01DCC9625000780C3 /* CustomButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +172,16 @@
 		67AFF6EF1DB5CC2E00697135 /* NSString+PDRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PDRegex.m"; sourceTree = "<group>"; };
 		67AFF6F11DB5CC5B00697135 /* FSElementProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementProperty.h; sourceTree = "<group>"; };
 		67AFF6F21DB5CC5B00697135 /* FSElementProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementProperty.m; sourceTree = "<group>"; };
+		67F73F9D1DCC8A70000780C3 /* mainbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainbg.png; sourceTree = "<group>"; };
+		67F73FA11DCC8ADF000780C3 /* mainbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainbg@2x.png"; sourceTree = "<group>"; };
+		67F73FA31DCC8BF7000780C3 /* btnbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnbg.png; sourceTree = "<group>"; };
+		67F73FA41DCC8BF7000780C3 /* btnbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnbg@2x.png"; sourceTree = "<group>"; };
+		67F73FA71DCC8E31000780C3 /* btnbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnbg2.png; sourceTree = "<group>"; };
+		67F73FA81DCC8E31000780C3 /* btnbg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnbg2@2x.png"; sourceTree = "<group>"; };
+		67F73FAB1DCC9278000780C3 /* btnguide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnguide.png; sourceTree = "<group>"; };
+		67F73FAC1DCC9278000780C3 /* btnguide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnguide@2x.png"; sourceTree = "<group>"; };
+		67F73FAF1DCC9625000780C3 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		67F73FB01DCC9625000780C3 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +321,8 @@
 				6741CE751DB8A713000408E7 /* EVerticalScrollView.m */,
 				6741CE771DB8B4DF000408E7 /* EEditorTableView.h */,
 				6741CE781DB8B4DF000408E7 /* EEditorTableView.m */,
+				67F73FAF1DCC9625000780C3 /* CustomButton.h */,
+				67F73FB01DCC9625000780C3 /* CustomButton.m */,
 			);
 			path = MappingEditor;
 			sourceTree = "<group>";
@@ -309,6 +330,14 @@
 		6741CE6D1DB89DFE000408E7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				67F73FAB1DCC9278000780C3 /* btnguide.png */,
+				67F73FAC1DCC9278000780C3 /* btnguide@2x.png */,
+				67F73FA71DCC8E31000780C3 /* btnbg2.png */,
+				67F73FA81DCC8E31000780C3 /* btnbg2@2x.png */,
+				67F73FA31DCC8BF7000780C3 /* btnbg.png */,
+				67F73FA41DCC8BF7000780C3 /* btnbg@2x.png */,
+				67F73FA11DCC8ADF000780C3 /* mainbg@2x.png */,
+				67F73F9D1DCC8A70000780C3 /* mainbg.png */,
 				6741CE6E1DB8A04A000408E7 /* edit.png */,
 				6741CE6F1DB8A04A000408E7 /* remove.png */,
 				6741CE701DB8A04A000408E7 /* add.png */,
@@ -520,10 +549,18 @@
 				670F2EDA1DB2284400A1739F /* Assets.xcassets in Resources */,
 				6741CE711DB8A04A000408E7 /* edit.png in Resources */,
 				6741CE7F1DB8BA19000408E7 /* DetailWindowController.xib in Resources */,
+				67F73F9F1DCC8A70000780C3 /* mainbg.png in Resources */,
+				67F73FA91DCC8E31000780C3 /* btnbg2.png in Resources */,
 				670F2EDD1DB2284400A1739F /* MainMenu.xib in Resources */,
+				67F73FAE1DCC9278000780C3 /* btnguide@2x.png in Resources */,
+				67F73FA21DCC8ADF000780C3 /* mainbg@2x.png in Resources */,
+				67F73FAD1DCC9278000780C3 /* btnguide.png in Resources */,
 				6741CE731DB8A04A000408E7 /* add.png in Resources */,
+				67F73FA51DCC8BF7000780C3 /* btnbg.png in Resources */,
+				67F73FAA1DCC8E31000780C3 /* btnbg2@2x.png in Resources */,
 				6741CE691DB884DD000408E7 /* EditorWindowController.xib in Resources */,
 				6741CE721DB8A04A000408E7 /* remove.png in Resources */,
+				67F73FA61DCC8BF7000780C3 /* btnbg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +598,7 @@
 				6741CE791DB8B4DF000408E7 /* EEditorTableView.m in Sources */,
 				6741CE5C1DB87CE8000408E7 /* ECMappingForObjectiveC.m in Sources */,
 				6741CE5D1DB87CE8000408E7 /* OCMapping.h in Sources */,
+				67F73FB11DCC9625000780C3 /* CustomButton.m in Sources */,
 				670F2ED81DB2284400A1739F /* main.m in Sources */,
 				6741CE4F1DB87340000408E7 /* ESharedUserDefault.m in Sources */,
 				670F2ED51DB2284400A1739F /* AppDelegate.m in Sources */,
