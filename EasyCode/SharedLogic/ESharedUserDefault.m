@@ -90,6 +90,9 @@
 
 - (void)saveMappingForOC:(NSDictionary*)mapping
 {
+    if (mapping.allKeys.count == 0 || mapping.allKeys.count == 1) {
+        return;
+    }
     self.ocMapping = mapping.mutableCopy;
     [_sharedUD setObject:mapping forKey:KeyCodeShortcutForObjectiveC];
     [_sharedUD synchronize];

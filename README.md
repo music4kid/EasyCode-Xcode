@@ -1,6 +1,7 @@
 ### Available on App Store:
 
 https://itunes.apple.com/us/app/easycode/id1166493362?ls=1&mt=12
+![][image-1]
 
 ### What is it?
 
@@ -23,7 +24,7 @@ support both Objective C and Swift.
 ### How to use?
 **type code shortcut like "vdl"**
 
- **select menu item: Editor->EC->Insert EasyCode**
+ **select menu item: Editor-\>EC-\>Insert EasyCode**
 
 **"vdl" is automatically converted to:**
 
@@ -54,3 +55,4 @@ don't forget to add a Key Binding for fast access to menu item:
 
 <img src="http://mrpeak.cn/images/ec00.png" width="750">
 
+[image-1]:	http://og4f9bp1x.bkt.clouddn.com/easycode1.0.2.png

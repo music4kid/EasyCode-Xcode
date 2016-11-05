@@ -50,6 +50,16 @@
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"https://github.com/music4kid/EasyCode-Xcode"]];
 }
 
-
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    if (flag) {
+        return NO;
+    }
+    else
+    {
+        [self.window makeKeyAndOrderFront:self];
+        return YES;
+    }
+}
 
 @end
