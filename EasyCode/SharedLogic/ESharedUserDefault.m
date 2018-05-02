@@ -114,13 +114,13 @@
         _swiftMapping = [_sharedUD dictionaryForKey:KeyCodeShortcutForSwift].mutableCopy;
         
         BOOL isMappingEmpty = false;
-        if (_ocMapping == nil || (_ocMapping.allKeys.count == 1 && [_ocMapping[@"key"] isEqualToString:@"code"])) {
+        if (_swiftMapping == nil || (_swiftMapping.allKeys.count == 1 && [_swiftMapping[@"key"] isEqualToString:@"code"])) {
             isMappingEmpty = true;
         }
 
         if (isMappingEmpty) {
             _swiftMapping = self.swiftMappingDefault.mutableCopy;
-            [self saveMappingForOC:self.swiftMappingDefault];
+            [self saveMappingForSwift:self.swiftMappingDefault];
         }
     }
     
