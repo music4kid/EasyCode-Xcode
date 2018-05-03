@@ -7,59 +7,93 @@
 //
 
 #import "AppDelegate.h"
-#import "EditorWindowController.h"
+#import "ECMainWindowController.h"
+#import "NSWindowController+Additions.h"
 
 @interface AppDelegate ()
-
-@property (weak) IBOutlet NSWindow *window;
-@property (nonatomic, strong) EditorWindowController*                 editorOC;
-@property (nonatomic, strong) EditorWindowController*                 editorSwift;
-
+@property (nonatomic, strong) NSStatusItem         *statusItem;
 @end
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
++(instancetype)sharedInstance {
+    AppDelegate* appDelegate = [NSApplication sharedApplication].delegate;
+    return appDelegate;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
+- (void)ubiquityIdentityChanged:(NSNotification *)notification
+{
+    id token = [[NSFileManager defaultManager] ubiquityIdentityToken];
+    if (token == nil) {
+        NSAlert *warningAlert = [NSAlert ec_alertWithStyle:NSWarningAlertStyle
+                                               messageText:NSLocalizedString(@"Logged_Out_Message", nil)
+                                           informativeText:NSLocalizedString(@"Logged_Out_Message_Explain", nil)
+                                               buttonTitle:NSLocalizedString(@"Button_OK_Title", nil),
+                                 nil];
+        [warningAlert runModal];
+    } else {
+        if ([self.ubiquityToken isEqual:token]) {
+            NSLog(@"user has stayed logged in with same account");
+        } else {
+            NSLog(@"user logged in with a new account");
+        }
+        self.ubiquityToken = token;
+    }
+}
+
+- (IBAction)clickStatusBarItem:(id)sender {
+    NSString* quoteText = @"Never put off until tomorrow what you can do the day after tomorrow.";
+    NSString* quoteAuthor = @"Mark Twain";
+    NSLog(@"%@ - %@",quoteText,quoteAuthor);
+}
+
+- (void)setupStatusItem {
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
+    _statusItem.image = [NSImage imageNamed:@"StatusBarImage"];
+    _statusItem.action = @selector(clickStatusBarItem:);
+}
+
+- (void)setupUbiquityURL {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        _ubiquityURL = [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
+    });
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(ubiquityIdentityChanged:)
+                                                 name:NSUbiquityIdentityDidChangeNotification
+                                               object:nil];
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    [self setupUbiquityURL];
+    [self setupStatusItem];
+    _mainController = [[ECMainWindowController alloc] initWithWindowNibName:@"ECMainWindowController"];
+    [_mainController ec_makeWindowFront];
+}
+
+- (void)applicationDidBecomeActive:(NSNotification *)notification
+{
+    _ubiquityToken = [[NSFileManager defaultManager] ubiquityIdentityToken];
+    
+}
+
+- (void)applicationWillTerminate:(NSNotification *)aNotification
+{
     // Insert code here to tear down your application
 }
 
-- (IBAction)showEditorWindowForOC:(id)sender
-{
-    if (self.editorOC == nil) {
-        self.editorOC = [[EditorWindowController alloc] initWithWindowNibName:@"EditorWindowController"];
-        [_editorOC initEditorWindow:EditorTypeOC];
-    }
-    [_editorOC showWindow:self];
-}
-
-- (void)showEditorWindowForSwift:(id)sender
-{
-    if (self.editorSwift == nil) {
-        self.editorSwift = [[EditorWindowController alloc] initWithWindowNibName:@"EditorWindowController"];
-        [_editorSwift initEditorWindow:EditorTypeSwift];
-    }
-    [_editorSwift showWindow:self];
-}
-
-- (IBAction)showHowToUse:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"https://github.com/music4kid/EasyCode-Xcode"]];
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender {
+    return NO;
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
 {
-    if (flag) {
-        return NO;
-    }
-    else
-    {
-        [self.window makeKeyAndOrderFront:self];
-        return YES;
-    }
+    return YES;
 }
 
 @end

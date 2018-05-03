@@ -8,15 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef enum : NSUInteger {
-    EditorTypeOC,
-    EditorTypeSwift,
-} EditorType;
-
 @interface EditorWindowController : NSWindowController
-
-@property (nonatomic, strong) IBOutlet NSTableView*           tableView;
-
-- (void)initEditorWindow:(EditorType)editorType;
-
+- (instancetype)initEditorWindowForType:(ECSourceType)sourceType;
 @end

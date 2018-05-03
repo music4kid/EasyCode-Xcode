@@ -8,10 +8,11 @@
 
 #import "ECMappingForObjectiveC.h"
 #import "OCMapping.h"
+#import "ECSnippetEntry.h"
 
 @implementation ECMappingForObjectiveC
 
-- (NSDictionary*)provideMapping {
++ (NSArray*)defaultEntries {
     NSDictionary* mapping = @{
              //UIViewController
              KeyOC_UIViewController_VDL:KeyOC_UIViewController_VDL_Value,
@@ -63,9 +64,14 @@
              KeyOC_Template_Label:KeyOC_Template_Label_Value,
              KeyOC_Template_ImageView:KeyOC_Template_ImageView_Value,
              
-             }.mutableCopy;
-    
-    return mapping;
+             };
+    NSMutableArray* snippetList = [NSMutableArray arrayWithCapacity:mapping.count];
+    [mapping enumerateKeysAndObjectsUsingBlock:^(NSString*  _Nonnull key, NSString*  _Nonnull code, BOOL * _Nonnull stop) {
+        ECSnippetEntry* snippet = [ECSnippetEntry snippetWithKey:key code:code];
+        [snippetList addObject:snippet];
+    }];
+    NSArray* snippets = [snippetList copy];
+    return snippets;
 }
 
 

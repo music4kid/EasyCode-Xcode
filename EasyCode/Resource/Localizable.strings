@@ -1,0 +1,13 @@
+// errors
+"Search_Failed" = "Failed to start the search for documents in iCloud.";
+
+// log out alert
+"Logged_Out_Message" = "You have been using iCloud, but it has now become unavailable.";
+"Logged_Out_Message_Explain" = "Please check your network connection and make sure you are signed in.";
+"Button_OK_Title" = "OK";
+"Button_Cancel_Title" = "Cancel";
+"iCloud_Attention" = "Attention";
+"iCloud_Attention_Message" = "This will delete notes from your iCloud account. Are you sure?";
+
+"Entry_Delete_Message" = "Delete Entry";
+"Entry_Delete_Message_Explain" = "This will delete entry from your snippets lab. Are you sure?";

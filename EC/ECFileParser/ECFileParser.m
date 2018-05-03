@@ -25,9 +25,7 @@
 }
 
 - (FSElementCache*)getElementByContent:(NSString*)content selection:(NSRange)range {
-	
     FSElementCache* element = nil;
-    
     FSImpProcessor* p = [FSImpProcessor new];
     NSArray* elementsInFile = [p createElements:content];
     for (FSElementCache* e in elementsInFile) {

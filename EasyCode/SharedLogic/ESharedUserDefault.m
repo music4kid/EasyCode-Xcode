@@ -10,23 +10,12 @@
 #import "ECMappingForObjectiveC.h"
 #import "ECMappingForSwift.h"
 
-#define KeySharedContainerGroup @"2WQE6AU5PD.group.com.music4kid.easycode"
-
-#define KeyCodeShortcutForObjectiveC @"KeyCodeShortcutForObjectiveC"
-#define KeyCodeShortcutForSwift @"KeyCodeShortcutForSwift"
-
-#define KeyCurrentUDVersion @"KeyCurrentUDVersion"
-#define ValueCurrentUDVersion @"1"
+#define KeySharedContainerGroup         @"JW95CV255J.group.com.sito.easycode"
+#define KeyCurrentUDVersion             @"KeyCurrentUDVersion"
+#define ValueCurrentUDVersion           @"1"
 
 @interface ESharedUserDefault ()
 @property (nonatomic, strong) NSUserDefaults*                   sharedUD;
-
-@property (nonatomic, strong) NSDictionary*                     ocMappingDefault;
-@property (nonatomic, strong) NSDictionary*                     swiftMappingDefault;
-
-@property (nonatomic, strong) NSMutableDictionary*              ocMapping;
-@property (nonatomic, strong) NSMutableDictionary*              swiftMapping;
-
 @end
 
 @implementation ESharedUserDefault
@@ -37,7 +26,7 @@
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [ESharedUserDefault new];
+        instance = [[ESharedUserDefault alloc] init];
     });
 
     return instance;
@@ -47,7 +36,6 @@
 {
     self = [super init];
     if (self) {
-        
         [self initSharedUD];
     }
     return self;
@@ -55,91 +43,62 @@
 
 - (void)initSharedUD
 {
-    self.sharedUD = [[NSUserDefaults alloc] initWithSuiteName:KeySharedContainerGroup];
-    if ([_sharedUD objectForKey:KeyCurrentUDVersion] == nil) {
+    _sharedUD = [[NSUserDefaults alloc] initWithSuiteName:KeySharedContainerGroup];
+    NSString* UIVersion = [_sharedUD objectForKey:KeyCurrentUDVersion];
+    if (UIVersion == nil) {
         [_sharedUD setObject:ValueCurrentUDVersion forKey:KeyCurrentUDVersion];
     }
 }
 
-- (void)clearMapping
++ (BOOL)boolForKey:(NSString*)key
 {
-    _ocMapping = nil;
-    _swiftMapping = nil;
+    NSUserDefaults* shareUD = [[ESharedUserDefault sharedInstance] sharedUD];
+    return [shareUD boolForKey:key];
 }
 
-#pragma mark - Objective-C
-
-- (NSDictionary*)readMappingForOC
++ (id)objectForKey:(NSString*)key
 {
-    if (_ocMapping == nil) {
-        _ocMapping = [_sharedUD dictionaryForKey:KeyCodeShortcutForObjectiveC].mutableCopy;
-        
-        BOOL isMappingEmpty = false;
-        if (_ocMapping == nil || (_ocMapping.allKeys.count == 1 && [_ocMapping[@"key"] isEqualToString:@"code"])) {
-            isMappingEmpty = true;
-        }
-        
-        if (isMappingEmpty == true) {
-            _ocMapping = self.ocMappingDefault.mutableCopy;
-            [self saveMappingForOC:self.ocMappingDefault];
-        }
-    }
-    
-    return _ocMapping;
+    NSUserDefaults* shareUD = [[ESharedUserDefault sharedInstance] sharedUD];
+    return [shareUD objectForKey:key];
 }
 
-- (void)saveMappingForOC:(NSDictionary*)mapping
++ (id)dataForKey:(NSString*)key {
+    NSUserDefaults* shareUD = [[ESharedUserDefault sharedInstance] sharedUD];
+    return [shareUD dataForKey:key];
+}
+
++ (id)stringForKey:(NSString*)key {
+    NSUserDefaults* shareUD = [[ESharedUserDefault sharedInstance] sharedUD];
+    return [shareUD stringForKey:key];
+}
+
++ (void)setBool:(BOOL)value forKey:(NSString*)key
 {
-    if (mapping.allKeys.count == 0 || mapping.allKeys.count == 1) {
+    NSUserDefaults* shareUD = [[ESharedUserDefault sharedInstance] sharedUD];
+    [shareUD setBool:value forKey:key];
+    [shareUD synchronize];
+}
+
++ (void)setObject:(NSObject*)value forKey:(NSString*)key
+{
+    NSUserDefaults* shareUD = [[ESharedUserDefault sharedInstance] sharedUD];
+    [shareUD setObject:value forKey:key];
+    [shareUD synchronize];
+}
+
++ (void)setObjects:(NSArray*)values forKeys:(NSArray*)keys
+{
+    if (keys.count != values.count) {
         return;
     }
-    self.ocMapping = mapping.mutableCopy;
-    [_sharedUD setObject:mapping forKey:KeyCodeShortcutForObjectiveC];
-    [_sharedUD synchronize];
-}
 
-- (NSDictionary*)ocMappingDefault
-{
-    if (_ocMappingDefault == nil) {
-        _ocMappingDefault = [[ECMappingForObjectiveC new] provideMapping];
+    NSUserDefaults* shareUD = [[ESharedUserDefault sharedInstance] sharedUD];
+    [keys enumerateObjectsUsingBlock:^(NSString*  _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
+        [shareUD setObject:values[idx] forKey:key];
+    }];
+    BOOL success = [shareUD synchronize];
+    if (!success) {
+        NSLog(@"synchronize error");
     }
-    return _ocMappingDefault;
 }
-
-#pragma mark - Swift
-
-- (NSDictionary*)readMappingForSwift
-{
-    if (_swiftMapping == nil) {
-        _swiftMapping = [_sharedUD dictionaryForKey:KeyCodeShortcutForSwift].mutableCopy;
-        
-        BOOL isMappingEmpty = false;
-        if (_swiftMapping == nil || (_swiftMapping.allKeys.count == 1 && [_swiftMapping[@"key"] isEqualToString:@"code"])) {
-            isMappingEmpty = true;
-        }
-
-        if (isMappingEmpty) {
-            _swiftMapping = self.swiftMappingDefault.mutableCopy;
-            [self saveMappingForSwift:self.swiftMappingDefault];
-        }
-    }
-    
-    return _swiftMapping;
-}
-
-- (void)saveMappingForSwift:(NSDictionary*)mapping
-{
-    self.swiftMapping = mapping.mutableCopy;
-    [_sharedUD setObject:mapping forKey:KeyCodeShortcutForSwift];
-    [_sharedUD synchronize];
-}
-
-- (NSDictionary*)swiftMappingDefault
-{
-    if (_swiftMappingDefault == nil) {
-        _swiftMappingDefault = [[ECMappingForSwift new] provideMapping];
-    }
-    return _swiftMappingDefault;
-}
-
 @end

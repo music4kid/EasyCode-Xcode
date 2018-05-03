@@ -7,7 +7,6 @@
 //
 
 #import "EasyCodeManager.h"
-#import "ECMappingForObjectiveC.h"
 #import "ECGenerateHelper.h"
 #import "ECMappingHelper.h"
 
@@ -31,6 +30,7 @@
 
 - (void)handleInvocation:(XCSourceEditorCommandInvocation *)invocation
 {
+
     //dynamic code generation based on class parsing like FastStub(https://github.com/music4kid/FastStub-Xcode)
     if ([[ECGenerateHelper sharedInstance] handleInvocation:invocation]) {
         return;
@@ -42,7 +42,6 @@
     
     
 }
-
 
 
 @end

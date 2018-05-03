@@ -1,5 +1,5 @@
 //
-//  CustomButton.h
+//  ECustomButton.h
 //  EasyCode
 //
 //  Created by gao feng on 2016/11/4.
@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CustomButton : NSButton
+@interface ECustomButton : NSButton
 
 @end

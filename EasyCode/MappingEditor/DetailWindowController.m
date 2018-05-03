@@ -9,38 +9,37 @@
 #import "DetailWindowController.h"
 
 @interface DetailWindowController () <NSTextFieldDelegate, NSWindowDelegate, NSControlTextEditingDelegate>
-@property (nonatomic, strong) EShortcutEntry*                 curEntry;
-
+@property (nonatomic, strong) ECSnippetEntry*                 curEntry;
 @end
 
 @implementation DetailWindowController
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    _edited = NO;
     
     [self updateEntryDisplay];
-    
     self.window.delegate = self;
-
+    [self.window center];
 }
 
 - (void)windowWillClose:(NSNotification *)notification
 {
     if (_delegate) {
         if (_editMode == DetailEditorModeUpdate) {
-            [_delegate onEntryUpdated:_curEntry];
+            [_delegate onSnippetUpdated:_curEntry];
         }
         else if(_editMode == DetailEditorModeInsert)
         {
-            [_delegate onEntryInserted:_curEntry];
+            [_delegate onSnippetInserted:_curEntry];
         }
     }
+    _edited = NO;
 }
 
-- (void)initWithMappingEntry:(EShortcutEntry*)entry
+- (void)initWithEntry:(ECSnippetEntry*)entry
 {
     self.curEntry = entry;
-    
     [self updateEntryDisplay];
 }
 
@@ -71,10 +70,18 @@
     NSTextField *textField = [notification object];
     
     if (textField == _txtKey) {
-        _curEntry.key = [textField stringValue];
+        NSString* changedValue = [textField stringValue];
+        if ([_curEntry.key isEqualToString:changedValue] == NO) {
+            _edited = YES;
+        }
+        _curEntry.key = changedValue;
     }
     else if(textField == _txtCode)
     {
+        NSString* changedValue = [textField stringValue];
+        if ([_curEntry.code isEqualToString:changedValue] == NO) {
+            _edited = YES;
+        }
         _curEntry.code = [textField stringValue];
     }
 }
@@ -99,4 +106,12 @@
     return result;
 }
 
+- (void)setEditMode:(DetailEditorMode)editMode {
+    _editMode = editMode;
+    if (_editMode == DetailEditorModeUpdate) {
+        [_txtCode becomeFirstResponder];
+    } else {
+        [_txtKey becomeFirstResponder];
+    }
+}
 @end

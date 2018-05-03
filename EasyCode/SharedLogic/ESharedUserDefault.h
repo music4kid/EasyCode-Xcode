@@ -8,18 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#define _UD [ESharedUserDefault sharedInstance]
-
 @interface ESharedUserDefault : NSObject
++ (BOOL)boolForKey:(NSString*)key;
++ (id)objectForKey:(NSString*)key;
++ (id)dataForKey:(NSString*)key;
++ (id)stringForKey:(NSString*)key;
 
-+ (instancetype)sharedInstance;
-
-- (NSDictionary*)readMappingForOC;
-- (void)saveMappingForOC:(NSDictionary*)mapping;
-
-- (NSDictionary*)readMappingForSwift;
-- (void)saveMappingForSwift:(NSDictionary*)mapping;
-
-- (void)clearMapping;
-
++ (void)setBool:(BOOL)value forKey:(NSString*)key;
++ (void)setObject:(NSObject*)value forKey:(NSString*)key;
++ (void)setObjects:(NSArray*)values forKeys:(NSArray*)keys;
 @end
