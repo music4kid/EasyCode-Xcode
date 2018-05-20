@@ -10,7 +10,5 @@
 #import "ECMapping.h"
 
 @interface ECMappingForSwift : ECMapping
-
-- (NSDictionary*)provideMapping;
-
++ (NSArray*)defaultEntries;
 @end

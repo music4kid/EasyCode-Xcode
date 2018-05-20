@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary*                  elementMap;
 
-- (void)parseElementFromProjectFile:(NSString*)filePath complete:(dispatch_block_t)completeBlock;
+//- (void)parseElementFromProjectFile:(NSString*)filePath complete:(dispatch_block_t)completeBlock;
 - (void)parseHeaderFile:(NSString*)filePath;
 
 - (FSElementCache*)getElementFromCache:(NSString*)elementName;

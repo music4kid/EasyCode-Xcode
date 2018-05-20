@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>2WQE6AU5PD.group.com.music4kid.easycode</string>
+		<string>$(TeamIdentifierPrefix)group.com.sito.easycode</string>
 	</array>
 </dict>
 </plist>

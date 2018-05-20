@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ECMainWindowController">
+            <connections>
+                <outlet property="useicloudBtn" destination="fcr-dE-fg3" id="Nh4-9c-5Fs"/>
+                <outlet property="window" destination="4Zh-pb-Uok" id="1AW-Gr-gY8"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="EasyCode" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="4Zh-pb-Uok" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="320" height="320"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" wantsLayer="YES" id="Hej-Mn-zCB">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mg2-76-Eb1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="mainbg" id="Mg1-Rj-XjU"/>
+                    </imageView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-rO-vGm" customClass="ECustomButton">
+                        <rect key="frame" x="37" y="121" width="108" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" title="Objective C" bezelStyle="rounded" image="btnbg" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="LA4-zv-wMG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showEditorWindowForOC:" target="-2" id="Ws9-f1-ELM"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRq-eZ-LJb" customClass="ECustomButton">
+                        <rect key="frame" x="184" y="121" width="100" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" title="Swift" bezelStyle="regularSquare" image="btnbg2" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="VXc-AV-VYz">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showEditorWindowForSwift:" target="-2" id="w8x-jE-Cie"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcr-dE-fg3">
+                        <rect key="frame" x="114" y="32" width="93" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="icloud sync" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3gp-6X-k46">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="useiCloudCheck:" target="-2" id="a5Z-18-gOK"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgE-rc-eFd" customClass="ECustomButton">
+                        <rect key="frame" x="262" y="-1" width="60" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" title="Guide" bezelStyle="regularSquare" image="btnguide" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="0A9-az-zUb">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHowToUse:" target="-2" id="c7r-bB-brm"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="-190" y="73"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="btnbg" width="200" height="200"/>
+        <image name="btnbg2" width="200" height="200"/>
+        <image name="btnguide" width="120" height="60"/>
+        <image name="mainbg" width="640" height="640"/>
+    </resources>
+</document>

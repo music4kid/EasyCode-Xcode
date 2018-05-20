@@ -7,12 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+@class ECMainWindowController;
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
-- (IBAction)showEditorWindowForOC:(id)sender;
-- (IBAction)showEditorWindowForSwift:(id)sender;
-- (IBAction)showHowToUse:(id)sender;
-
+//icloud
+@property (nonatomic, strong) id ubiquityToken;
+@property (nonatomic, strong) NSURL *ubiquityURL;
+@property (nonatomic, strong) ECMainWindowController* mainController;
++(instancetype)sharedInstance;
 @end
 

@@ -10,7 +10,5 @@
 #import "ECMapping.h"
 
 @interface ECMappingForObjectiveC : ECMapping
-
-- (NSDictionary*)provideMapping;
-
++ (NSArray*)defaultEntries;
 @end

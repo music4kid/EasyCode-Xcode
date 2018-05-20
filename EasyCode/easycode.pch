@@ -1,0 +1,20 @@
+//
+//  easycode.h
+//  EasyCode
+//
+//  Created by lijia on 03/03/2017.
+//  Copyright © 2017 music4kid. All rights reserved.
+//
+
+#if defined(__cplusplus)
+#define EC_EXTERN extern "C"
+#else
+#define EC_EXTERN extern
+#endif
+
+#import "ECDefine.h"
+#import "AppDelegate.h"
+#import "NSString+Additions.h"
+#import "NSFileManager+Additions.h"
+#import "NSAlert+Additions.h"
+#import "ESharedUserDefault.h"

@@ -7,58 +7,41 @@
 //
 
 #import "ECMappingHelper.h"
-#import "ECMappingForObjectiveC.h"
-#import "ECMappingForSwift.h"
+#import "NSFileManager+Additions.h"
 #import "ESharedUserDefault.h"
+#import "ECSnippet.h"
+#import "ECSnippetHelper.h"
 
 @interface ECMappingHelper ()
-@property (nonatomic, strong) NSMutableDictionary*                 mappingOC;
-@property (nonatomic, strong) NSMutableDictionary*                 mappingSwift;
+@property (nonatomic, strong)   ECSnippet* curSnippets;
 @end
 
 @implementation ECMappingHelper
 
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
     static ECMappingHelper* instance = nil;
-
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [ECMappingHelper new];
+        instance = [[ECMappingHelper alloc] init];
     });
 
     return instance;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-
-    }
-    return self;
-}
-
-- (void)checkForDuplicatedKeys:(NSDictionary*)mapping
-{
-    //check for duplicated keys
-    NSArray* keys = mapping.allKeys;
-    NSMutableDictionary* dic = @{}.mutableCopy;
-    for (NSString* key in keys) {
-        if ([dic objectForKey:keys]) {
-            NSLog(@"detect duplicated keys!");
-        }
-        else
-        {
-            dic[key] = key;
-        }
+- (void)reloadSnippetBySourceType:(ECSourceType)sourceType {
+    NSString* dirname = [ECSnippetHelper directoryForSourceType:sourceType];
+    NSString* versionKey = [NSString stringWithFormat:kVersionFormat,dirname];
+    NSNumber* latestVer = [ESharedUserDefault objectForKey:versionKey];
+    
+    if ([_curSnippets.version isEqualToNumber:latestVer] == NO) { //if versions are not equal,reload from UserDefaults.
+        NSData* data = [ESharedUserDefault dataForKey:dirname];
+        _curSnippets = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
 }
 
 - (BOOL)handleInvocation:(XCSourceEditorCommandInvocation *)invocation {
-    
-    //read from NSUserDefault each time
-    [self clearMapping];
+    ECSourceType sourceType = [ECSnippetHelper sourceTypeForContentUTI:invocation.buffer.contentUTI];
+    [self reloadSnippetBySourceType:sourceType];
     
     XCSourceTextRange *selection = invocation.buffer.selections.firstObject;
     NSMutableArray* lines = invocation.buffer.lines;
@@ -67,12 +50,11 @@
     
     int matchedCount = 0;
     
-    if (index > lines.count-1) {
+    if (index > lines.count - 1) {
         return false;
     }
     
     NSString* originalLine = lines[index];
-    
     int matchLength = 8;//max match length for shortcut
     while (matchLength >= 1) {
         
@@ -81,19 +63,14 @@
             NSRange targetRange = NSMakeRange(column-matchLength, matchLength);
             NSString* lastNStr = [originalLine substringWithRange:targetRange];
             
-            BOOL isOC = true;
-            if ([invocation.buffer.contentUTI isEqualToString:@"public.swift-source"]) {
-                isOC = false;
-            }
-            NSString* matchedVal = [self getMatchedCode:lastNStr isOC:isOC];
+            NSString* matchedVal = [self matchedCode:lastNStr forSourceType:sourceType];
             
             if (matchedVal.length > 0) {
-                
                 int numberOfSpaceIndent = (int)[originalLine rangeOfString:lastNStr].location;
                 NSString* indentStr = @"";
                 while (numberOfSpaceIndent>0) {
                     indentStr = [indentStr stringByAppendingString:@" "];
-                    numberOfSpaceIndent --;
+                    numberOfSpaceIndent--;
                 }
                 
                 NSArray* linesToInsert = [self convertToLines:matchedVal];
@@ -105,7 +82,7 @@
                                                                             range:targetRange];
                 
                 //insert the rest
-                for (int i = 1; i < linesToInsert.count; i ++) {
+                for (int i = 1; i < linesToInsert.count; i++) {
                     NSString* lineToInsert = linesToInsert[i];
                     //indent
                     lineToInsert = [NSString stringWithFormat:@"%@%@", indentStr, lineToInsert];
@@ -118,10 +95,9 @@
             }
         }
         
-        matchLength --;
+        matchLength--;
         
     }
-    
     
     //adjust selection
     if (matchedCount > 0) {
@@ -132,62 +108,28 @@
 }
 
 
-- (NSString*)getMatchedCode:(NSString*)abbr isOC:(BOOL)isOC
-{
+- (NSString*)matchedCode:(NSString*)abbr forSourceType:(ECSourceType)type {
     //need to detect swift or oc
-    NSDictionary* mappingDic = nil;
+    NSArray<ECSnippetEntry*>* entries = _curSnippets.entries;
+    __block NSInteger index = NSNotFound;
+    [_curSnippets.entries enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(ECSnippetEntry * _Nonnull entry, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([entry.key hasPrefix:abbr] || [entry.key isEqual:abbr]) {
+            index = idx;
+            *stop = YES;
+        }
+    }];
     
-    if (isOC) {
-        mappingDic = self.mappingOC;
-    }
-    else
-    {
-        mappingDic = self.mappingSwift;
-    }
-    
-    if ([mappingDic objectForKey:abbr] != nil) {
-        return [mappingDic objectForKey:abbr];
+    if (index != NSNotFound) {
+        NSString* matchedCode = [entries[index] code];
+        return matchedCode;
     }
     
     return nil;
 }
 
-
-- (NSArray*)convertToLines:(NSString*)codeStr
-{
-    NSMutableArray* lines = @[].mutableCopy;
-    
+- (NSArray*)convertToLines:(NSString*)codeStr {
     NSArray* arr = [codeStr componentsSeparatedByString:@"\n"];
-    
-    for (NSString* line in arr) {
-        [lines addObject:line];
-    }
-    
-    return lines;
-}
-
-- (NSMutableDictionary*)mappingOC
-{
-    if (_mappingOC == nil) {
-        _mappingOC = [_UD readMappingForOC].mutableCopy;
-    }
-    return _mappingOC;
-}
-
-- (NSMutableDictionary*)mappingSwift
-{
-    if (_mappingSwift == nil) {
-        _mappingSwift = [_UD readMappingForSwift].mutableCopy;
-    }
-    return _mappingSwift;
-}
-
-- (void)clearMapping
-{
-    self.mappingOC = nil;
-    self.mappingSwift = nil;
-    
-    [_UD clearMapping];
+    return arr;
 }
 
 @end
